@@ -11,11 +11,13 @@
 <br>
 
 ## SPRINTS
-1.
-2.
-3.
-4.
-5.
-6.
-7.
-8.
+
+- [Sprint 1](https://github.com/aline-hoffmann/scholarship-compass/tree/eaea19c52606a8fa7e28b991a9e08aaee79cc144/Sprint_1)
+- [Sprint 2]
+- [Sprint 3]
+- [Sprint 4]
+- [Sprint 5]
+- [Sprint 6]
+- [Sprint 7]
+- [Sprint 8]
+
