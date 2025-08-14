@@ -82,7 +82,7 @@ Dica para ordenação: Utilize Replace.
     order by quantidade_publicacoes desc
     limit 1
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Evidencias-exercicios/ex5.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Evidencias-exercicios/ex6.jpg)
 
 <br>
 
@@ -94,7 +94,7 @@ Dica para ordenação: Utilize Replace.
     where livro.cod is null
     order by autor.nome
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Evidencias-exercicios/ex5.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Evidencias-exercicios/ex7.jpg)
 
 <br>
 
