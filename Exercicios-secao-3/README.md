@@ -1,9 +1,9 @@
 **E01.** Apresente a query para listar todos os livros publicados após 2014. Ordenar pela coluna cod, em ordem crescente, as linhas. Atenção às colunas esperadas no resultado final: cod, titulo, autor, editora, valor, publicacao, edicao, idioma.
 
-    select
+    select *
     from livro
     where publicacao > '2014-12-31'
-    order by cod asc;
+    order by cod
 
 - [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Evidencias-exercicios/ex1.jpg)
 
@@ -69,3 +69,32 @@ Dica para ordenação: Utilize Replace.
 - [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Evidencias-exercicios/ex5.jpg)
 
 <br>
+
+**E06.** Apresente a query para listar o autor com maior número de livros publicados. O resultado deve conter apenas as colunas codautor, nome, quantidade_publicacoes.
+
+    select
+        autor.codautor,
+        autor.nome,
+        count(livro.cod) as quantidade_publicacoes
+    from autor
+    left join livro on autor.codautor = livro.autor
+    group by autor.codautor, autor.nome
+    order by quantidade_publicacoes desc
+    limit 1
+
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Evidencias-exercicios/ex5.jpg)
+
+<br>
+
+**E07.** Apresente a query para listar o nome dos autores com nenhuma publicação. Apresentá-los em ordem crescente.
+
+    select autor.nome
+    from autor
+    left join livro on autor.codautor = livro.autor
+    where livro.cod is null
+    order by autor.nome
+
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Evidencias-exercicios/ex5.jpg)
+
+<br>
+
