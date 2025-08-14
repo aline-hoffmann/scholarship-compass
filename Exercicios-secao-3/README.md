@@ -16,7 +16,7 @@
     order by valor desc
     limit 10
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Evidencias-exercicios/ex1.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Evidencias-exercicios/ex2.jpg)
 
 <br>
 
@@ -34,7 +34,7 @@
     order by quantidade desc
     limit 5
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Evidencias-exercicios/ex1.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Evidencias-exercicios/ex3.jpg)
 
 <br>
 
@@ -52,7 +52,7 @@ Dica para ordenação: Utilize Replace.
     group by autor.nome, autor.codautor, autor.nascimento
     order by replace (autor.nome, 'Á', 'A')
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Evidencias-exercicios/ex1.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Evidencias-exercicios/ex4.jpg)
 
 <br>
 
@@ -66,6 +66,6 @@ Dica para ordenação: Utilize Replace.
     where endereco.estado not in ('SANTA CATARINA', 'RIO GRANDE DO SUL', 'PARANÁ')
     order by autor.nome
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Evidencias-exercicios/ex1.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Evidencias-exercicios/ex5.jpg)
 
 <br>
