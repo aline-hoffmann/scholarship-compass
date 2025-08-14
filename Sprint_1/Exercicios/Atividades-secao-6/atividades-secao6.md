@@ -17,7 +17,7 @@
     order by valor desc
     limit 10
 
-- [Link do arquivo .csv](linkaqui)
+- [Link do arquivo .csv](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Exercicios/Atividades-secao-6/atividade1_s6.csv)
 
 <br>
 
@@ -33,4 +33,4 @@
     order by QuantidadeLivros desc
     limit 5
 
-- [Link do arquivo .csv](linkaqui)
+- [Link do arquivo .csv](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Exercicios/Atividades-secao-6/atividade2_s6.csv)
