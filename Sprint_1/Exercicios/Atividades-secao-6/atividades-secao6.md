@@ -1,6 +1,6 @@
 ## <p align="center"> ATIVIDADES - SEÇÃO 6</p>
 
-**Etapa 1.** Para apresentar o resultado solicitado, utilizei o "AS" para renomear as colunas no resultado. O "LEFT JOIN" foi usado para combinar os valores solicitados das tabelas "autor" e "editora" com os da tabela "livro".
+**Etapa 1.** Para apresentar o resultado solicitado, utilizei o "AS" para renomear as colunas no resultado. O "LEFT JOIN" foi usado para combinar os valores solicitados das tabelas "autor" e "editora" com os da tabela "livro". Como separador, conforme solicitado utilizei o ";".
 
     select
         livro.cod as CodLivro,
@@ -21,7 +21,7 @@
 
 <br>
 
-**Etapa 2.** Para obter o resultado solicitado, utilizei novamente o "AS" para renomear as colunas no resultado. Dessa vez foi usado o "INNER JOIN" para unir apenas as linhas em que o código da tabela "editora" coincide com o valor da coluna "editora" na tabela "livro".
+**Etapa 2.** Para obter o resultado solicitado, utilizei novamente o "AS" para renomear as colunas no resultado. Dessa vez foi usado o "INNER JOIN" para unir apenas as linhas em que o código da tabela "editora" coincide com o valor da coluna "editora" na tabela "livro". Como separador, dessa vez utilizei o "|" como solicitado.
 
     select
         editora.codeditora as CodEditora,
