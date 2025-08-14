@@ -1,4 +1,4 @@
-**E08.** Apresente a query para listar o código e o nome do vendedor com maior número de vendas (contagem), e que estas vendas estejam com o status concluída.  As colunas presentes no resultado devem ser, portanto, cdvdd e nmvdd.
+**E08.** Apresente a query para listar o código e o nome do vendedor com maior número de vendas (contagem), e que estas vendas estejam com o status concluída. As colunas presentes no resultado devem ser, portanto, cdvdd e nmvdd.
 
     select tbvendedor.cdvdd, tbvendedor.nmvdd
     from tbvendedor
@@ -8,7 +8,7 @@
     order by count(tbvendas.cdven) desc
     limit 1
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Evidencias-exercicios/ex1_secao3.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex8_secao4.jpg)
 
 <br>
 
@@ -21,11 +21,11 @@
     order by qtd desc
     limit 1
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Evidencias-exercicios/ex1_secao3.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex9_secao4.jpg)
 
 <br>
 
-**E10.** A comissão de um vendedor é definida a partir de um percentual sobre o total de vendas (quantidade * valor unitário) por ele realizado. O percentual de comissão de cada vendedor está armazenado na coluna perccomissao, tabela tbvendedor. 
+**E10.** A comissão de um vendedor é definida a partir de um percentual sobre o total de vendas (quantidade \* valor unitário) por ele realizado. O percentual de comissão de cada vendedor está armazenado na coluna perccomissao, tabela tbvendedor.
 
 Com base em tais informações, calcule a comissão de todos os vendedores, considerando todas as vendas armazenadas na base de dados com status concluído.
 
@@ -45,7 +45,7 @@ As colunas presentes no resultado devem ser vendedor, valor_total_vendas e comis
 
 **Nesse exercício utilizei a função "ROUND" para arrendondar as casas decimais, conforme solicitado.**
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Evidencias-exercicios/ex1_secao3.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex10_secao4.jpg)
 
 <br>
 
@@ -60,8 +60,8 @@ As colunas presentes no resultado devem ser vendedor, valor_total_vendas e comis
     group by tbvendas.cdcli, tbvendas.nmcli
     order by gasto desc
     limit 1
-    
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Evidencias-exer)
+
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex11_secao4.jpg)
 
 <br>
 
@@ -83,11 +83,11 @@ Observação: Apenas vendas com status concluído.
     order by valor_total_vendas
     limit 1
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Evidencias-exer)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex12_secao4.jpg)
 
 <br>
 
-**E13.** Apresente a query para listar os 10 produtos menos vendidos pelos canais de E-Commerce ou Matriz (Considerar apenas vendas concluídas).  As colunas presentes no resultado devem ser cdpro, nmcanalvendas, nmpro e quantidade_vendas.
+**E13.** Apresente a query para listar os 10 produtos menos vendidos pelos canais de E-Commerce ou Matriz (Considerar apenas vendas concluídas). As colunas presentes no resultado devem ser cdpro, nmcanalvendas, nmpro e quantidade_vendas.
 
     select
         tbestoqueproduto.cdpro,
@@ -103,7 +103,7 @@ Observação: Apenas vendas com status concluído.
     order by quantidade_vendas asc
     limit 10
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Evidencias-exer)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex13_secao4.jpg)
 
 <br>
 
@@ -119,7 +119,7 @@ Observação: Apenas vendas com status concluído.
     group by  tbvendas.estado
     order by gastomedio desc
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Evidencias-exer)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex14_secao4.jpg)
 
 <br>
 
@@ -130,7 +130,7 @@ Observação: Apenas vendas com status concluído.
     where tbvendas.deletado = 1
     order by tbvendas.cdven
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Evidencias-exer)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex15_secao4.jpg)
 
 <br>
 
@@ -148,4 +148,4 @@ Obs: Somente vendas concluídas.
     group by tbvendas.estado, tbvendas.nmpro
     order by tbvendas.estado, tbvendas.nmpro
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Evidencias-exer)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex16_secao4.jpg)

@@ -5,7 +5,7 @@
     where publicacao > '2014-12-31'
     order by cod
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Evidencias-exercicios/ex1_secao3.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex1_secao3.jpg)
 
 <br>
 
@@ -16,7 +16,7 @@
     order by valor desc
     limit 10
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Evidencias-exercicios/ex2_secao3.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex2_secao3.jpg)
 
 <br>
 
@@ -34,7 +34,7 @@
     order by quantidade desc
     limit 5
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Evidencias-exercicios/ex3_secao3.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex3_secao3.jpg)
 
 <br>
 
@@ -52,7 +52,7 @@ Dica para ordenação: Utilize Replace.
     group by autor.nome, autor.codautor, autor.nascimento
     order by replace (autor.nome, 'Á', 'A')
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Evidencias-exercicios/ex4_secao3.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex4_secao3.jpg)
 
 <br>
 
@@ -66,7 +66,7 @@ Dica para ordenação: Utilize Replace.
     where endereco.estado not in ('SANTA CATARINA', 'RIO GRANDE DO SUL', 'PARANÁ')
     order by autor.nome
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Evidencias-exercicios/ex5_secao3.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex5_secao3.jpg)
 
 <br>
 
@@ -82,7 +82,7 @@ Dica para ordenação: Utilize Replace.
     order by quantidade_publicacoes desc
     limit 1
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Evidencias-exercicios/ex6__secao3.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex6_secao3.jpg)
 
 <br>
 
@@ -94,6 +94,6 @@ Dica para ordenação: Utilize Replace.
     where livro.cod is null
     order by autor.nome
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Evidencias-exercicios/ex7_secao3.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex7_secao3.jpg)
 
 <br>
