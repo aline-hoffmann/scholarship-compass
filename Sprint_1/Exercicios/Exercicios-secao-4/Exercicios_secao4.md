@@ -1,3 +1,5 @@
+## <p align="center"> EXERCÍCIOS - SEÇÃO 4</p>
+
 **E08.** Apresente a query para listar o código e o nome do vendedor com maior número de vendas (contagem), e que estas vendas estejam com o status concluída. As colunas presentes no resultado devem ser, portanto, cdvdd e nmvdd.
 
     select tbvendedor.cdvdd, tbvendedor.nmvdd
