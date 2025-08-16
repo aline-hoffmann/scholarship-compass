@@ -149,3 +149,7 @@ alter table locacao rename column idCiente to idCliente
 insert into entrega_loc(idLocacao, dataEntrega, horaEntrega)
 select distinct idLocacao, dataEntrega, horaEntrega
 from tb_original
+
+-- Excluindo a tb_original
+
+drop table tb_original
