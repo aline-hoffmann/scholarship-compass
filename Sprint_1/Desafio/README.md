@@ -14,7 +14,7 @@ Iniciei alterando o nome da tabela de "tb_locacao" para "tb_original".
 
 De acordo com a **1ª FORMA NORMAL**, cada campo da tabela deve conter apenas um valor atômico, evitando dados compostos ou repetidos em uma mesma coluna.
 
-Sendo assim, dividi os dados da "tb_original" em outras seis tabelas específicas, sendo elas: cliente, vendedor, carro, combustivel, locacao e entrega_loc. Dessa forma, cada atributo passou a armazenar apenas uma informação clara e direta.
+Sendo assim, dividi os dados da "tb_original" em outras seis tabelas específicas, sendo elas: [**cliente**](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-desafio/tab-cliente.jpg), [**vendedor**](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-desafio/tab-vendedor.jpg), [**carro**](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-desafio/tab-carro.jpg), [**combustivel**](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-desafio/tab-combustivel.jpg), [**locacao**](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-desafio/tab-locacao.jpg) e [**entrega_loc**](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-desafio/tab-entrega-loc.jpg). Dessa forma, cada atributo passou a armazenar apenas uma informação clara e direta.
 
 Exemplo de criação da tabela "cliente":
 
@@ -67,4 +67,21 @@ Além disso, realizei mais algumas alterações para melhor visualização e ent
 
 <br>
 
-Essa normalização seguiu [**esses passos**](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Desafio/Etapa-1/etapa1.sql) e resultou [**nesse modelo relacional**.](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-desafio/mod-relacional.jpg)
+Essa normalização seguiu [**esses passos**](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Desafio/Etapa-1/etapa1.sql) e resultou [**nesse diagrama relacional**.](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-desafio/mod-relacional.jpg)
+
+<br>
+<br>
+
+## [**ETAPA 2**](https://github.com/aline-hoffmann/scholarship-compass/tree/main/Sprint_1/Desafio/Etapa-2)
+
+Após a normalização, foi necessário criar a modelagem dimensional dos dados. Sendo assim, criei as tabelas Fato e Dimensão:
+
+- [**Tabela Fato "fato_locacao";**](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-desafio/tab-fato-locacao.jpg)<br>
+
+- [**Tabela Dimensão "dim_vendedor";**](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-desafio/tab-dim-vendedor.jpg)<br>
+
+- [**Tabela Dimensão "dim_cliente";**](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-desafio/tab-dim-cliente.jpg)<br>
+
+- [**Tabela Dimensão "dim_carro";**](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-desafio/tab-dim-carro.jpg)
+
+Essa modelagem seguiu [**esses passos;**](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Desafio/Etapa-2/etapa2.sql) e resultou nesse [**diagrama dimensional**](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-desafio/mod-dimensional.jpg).
