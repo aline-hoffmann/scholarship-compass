@@ -4,9 +4,9 @@
 
 🌍 Moro em **Passo Fundo**, RS, Brasil.
 <br>
-🎓 Sou graduada em Direito e atualmente curso <br>o quarto semestre de **Ciência da computação** na Atitus Educação.
+🎓 Sou graduada em Direito e atualmente curso o quarto semestre de **Ciência da computação** na Atitus Educação.
 <br>
-💼 Tenho experiência em desenvolvimento web<br> (front-end).
+💼 Tenho experiência em desenvolvimento web (front-end).
 
 <br>
 
