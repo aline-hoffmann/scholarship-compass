@@ -43,7 +43,9 @@ select *
 from dim_carro
 
 -- Criando a Tabela fato locacao
+
 -- Aqui também realizei uma alteração em relação ao modelo relacional, trazendo os dados de entrega para a tabela fato de locacão. Sendo assim atributos dela.
+
 -- Criei uma chave primária composta, sendo assim, o banco só vai permitir um único registro para cada combinação dos valores idCliente, idVendedor, idCarro e dataLocacao.
 
 create table fato_locacao(
