@@ -10,10 +10,6 @@ alter table tb_locacao rename to tb_original
 select *
 from tb_original
 
-/* update tb_original
-set dataLocacao = substring(dataLocacao, 1, 4) || '-' || substring(dataLocacao, 5, 2) || '-' || substring(dataLocacao, 7, 2),
-	dataEntrega = substring(dataEntrega , 1, 4) || '-' || substring(dataEntrega , 5, 2) || '-' || substring(dataEntrega , 7, 2)*/
-
 -- Criando e visualizando a tabela vendedor
 
 create table vendedor(
@@ -131,7 +127,7 @@ insert into carro(idCarro, kmCarro, chassiCarro, marcaCarro, modeloCarro, anoCar
 select distinct idCarro, kmCarro, chassiCarro, marcaCarro, modeloCarro, anoCarro, idcombustivel 
 from tb_original 
 
--- Ocorreu um erro nessa inserção de dados, então verifiquei que existem carros com mais de uma kilometragem. Sendo assim, optei por selecionar apenas a máxima kilometragem de cada carro, deixando a query assim:
+-- Ocorreu um erro nessa inserção de dados, então verifiquei que existem carros com mais de uma quilometragem. Sendo assim, optei por selecionar apenas a máxima quilometragem de cada carro, deixando a query assim:
 
 insert into carro(idCarro, kmCarro, chassiCarro, marcaCarro, modeloCarro, anoCarro, idCombustivel)
 select distinct idCarro, kmCarro, chassiCarro, marcaCarro, modeloCarro, anoCarro, idcombustivel 
