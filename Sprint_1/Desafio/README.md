@@ -84,4 +84,4 @@ Após a normalização, foi necessário criar a modelagem dimensional dos dados.
 
 - [**Tabela Dimensão "dim_carro";**](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-desafio/tab-dim-carro.jpg)
 
-Essa modelagem seguiu [**esses passos;**](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Desafio/Etapa-2/etapa2.sql) e resultou nesse [**diagrama dimensional**](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-desafio/mod-dimensional.jpg).
+Essa modelagem seguiu [**esses passos**](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Desafio/Etapa-2/etapa2.sql) e resultou nesse [**diagrama dimensional**](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-desafio/mod-dimensional.jpg).
