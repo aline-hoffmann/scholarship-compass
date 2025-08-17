@@ -67,4 +67,4 @@ Além disso, realizei mais algumas alterações para melhor visualização e ent
 
 <br>
 
-Essa normalização seguiu [**esses passos**](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Desafio/Etapa-1/etapa1.sql) e resultou [**nesse modelo relacional**.](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-desafio/relacional.jpg)
+Essa normalização seguiu [**esses passos**](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Desafio/Etapa-1/etapa1.sql) e resultou [**nesse modelo relacional**.](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-desafio/mod-relacional.jpg)
