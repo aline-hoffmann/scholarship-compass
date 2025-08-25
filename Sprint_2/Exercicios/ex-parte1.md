@@ -231,3 +231,52 @@ print(sem_duplicidade)
 ````
 
 - [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex1_secao3.jpg)
+
+**13.** Calcule o valor mínimo, valor máximo, valor médio e a mediana da lista gerada na célula abaixo:
+
+Obs.: Lembrem-se, para calcular a mediana a lista deve estar ordenada!
+
+import random <br>
+#amostra aleatoriamente 50 números do intervalo 0...500<br>
+random_list = random.sample(range(500),50)
+
+Use as variáveis abaixo para representar cada operação matemática:
+
+mediana<br>
+media<br>
+valor_minimo<br> 
+valor_maximo 
+
+````py
+import random 
+
+random_list = random.sample(range(500),50)
+def calculo_mediana(lista):
+    lista_ordenada = sorted(lista)
+    centro = len(lista_ordenada) // 2
+    if len(lista_ordenada) % 2 == 1:
+        return lista_ordenada[meio]
+    else:
+        return ((lista_ordenada[centro - 1] + lista_ordenada[centro]) / 2)
+
+mediana = calculo_mediana(random_list)
+media = sum(random_list) / len(random_list)
+valor_minimo = min(random_list)
+valor_maximo = max(random_list)
+
+print(f'Media: {media}, Mediana: {mediana}, Mínimo: {valor_minimo}, Máximo: {valor_maximo}')
+````
+
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex1_secao3.jpg)
+
+**14.** Imprima a lista abaixo de trás para frente.
+
+a = [1, 0, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+
+````py
+a = [1, 0, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+a.reverse()
+print(a)
+````
+
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex1_secao3.jpg)
