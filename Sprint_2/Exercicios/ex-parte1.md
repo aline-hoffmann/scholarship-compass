@@ -15,7 +15,7 @@ impares = [n for n in a if n % 2 != 0]
 print(impares)
 ````
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex1_secao3.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_2/Evidencias/ex1-parte1.jpg)
 
 <br>
 
@@ -32,7 +32,7 @@ for n in palavras:
     else:
         print("A palavra:", n, "não é um palíndromo")
 ````
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex1_secao3.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_2/Evidencias/ex2-parte1.jpg)
 
 
 **3.** Dada as listas a seguir:
@@ -56,7 +56,7 @@ for indice, nome in enumerate(primeirosNomes):
     print(f"{indice} - {nome} {sobrenome} está com {idade} anos")
 ````
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex1_secao3.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_2/Evidencias/ex3-parte1.jpg)
 
 
 **4.** Escreva uma função que recebe uma lista e retorna uma nova lista sem elementos duplicados. Utilize a lista a seguir para testar sua função.
@@ -72,7 +72,7 @@ resultado = sem_duplicados(lista_dupla)
 print(resultado)
 ````
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex1_secao3.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_2/Evidencias/ex4-parte1.jpg)
 
 **5.** Leia o arquivo person.json, faça o parsing e imprima seu conteúdo.
 
@@ -84,7 +84,7 @@ with open('person.json', 'r') as arquivo:
     
 print(dados)
 ````
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex1_secao3.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_2/Evidencias/ex5-parte1.jpg)
 
 **6.** Implemente a função my_map(list, f) que recebe uma lista como primeiro argumento e uma função como segundo argumento. Esta função aplica a função recebida para cada elemento da lista recebida e retorna o resultado em uma nova lista.
 
@@ -105,7 +105,7 @@ def potencia2(x):
 resultado = my_map(list_entrada, potencia2)
 print(resultado)
 ````
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex1_secao3.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_2/Evidencias/ex6-parte1.jpg)
 
 **7.** Escreva um programa que lê o conteúdo do arquivo texto arquivo_texto.txt e imprime o seu conteúdo.
 
@@ -116,7 +116,7 @@ with open('arquivo_texto.txt', 'r') as arquivo:
 print(conteudo_arq, end='')
 ````
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex1_secao3.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_2/Evidencias/ex7-parte1.jpg)
 
 **8.** Escreva uma função que recebe um número variável de parâmetros não nomeados e um número variado de parâmetros nomeados e imprime o valor de cada parâmetro recebido.
 
@@ -134,7 +134,7 @@ def print_parametros(*args, **kwargs):
 print_parametros(1, 3, 4, 'hello', parametro_nomeado='alguma coisa', x=20)
 ````
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex1_secao3.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_2/Evidencias/ex8-parte1.jpg)
 
 **9** Implemente a classe Lampada. A classe Lâmpada recebe um booleano no seu construtor, Truese a lâmpada estiver ligada, False caso esteja desligada. A classe Lampada possuí os seguintes métodos:
 
@@ -177,7 +177,7 @@ lampada.desliga()
 print("A lâmpada ainda está ligada?", lampada.esta_ligada()) 
 ````
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex1_secao3.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_2/Evidencias/ex9-parte1.jpg)
 
 **10.** Escreva uma função que recebe uma string de números separados por vírgula e retorne a soma de todos eles. Depois imprima a soma dos valores.
 
@@ -193,7 +193,7 @@ soma = soma_numeros(string_numeros)
 print(soma)
 ````
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex1_secao3.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_2/Evidencias/ex10-parte1.jpg)
 
 **11.** Escreva uma função que recebe como parâmetro uma lista e retorna 3 listas: a lista recebida dividida em 3 partes iguais. Teste sua implementação com a lista abaixo
 
@@ -212,7 +212,7 @@ parte1, parte2, parte3 = dividindo_lista(lista)
 print(parte1, parte2, parte3)
 ````
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex1_secao3.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_2/Evidencias/ex11-parte1.jpg)
 
 **12.** Dado o dicionário a seguir:
 
@@ -230,7 +230,7 @@ sem_duplicidade = list(set(valores))
 print(sem_duplicidade)
 ````
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex1_secao3.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_2/Evidencias/ex12-parte1.jpg)
 
 **13.** Calcule o valor mínimo, valor máximo, valor médio e a mediana da lista gerada na célula abaixo:
 
@@ -267,7 +267,7 @@ valor_maximo = max(random_list)
 print(f'Media: {media}, Mediana: {mediana}, Mínimo: {valor_minimo}, Máximo: {valor_maximo}')
 ````
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex1_secao3.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_2/Evidencias/ex13-parte1.jpg)
 
 **14.** Imprima a lista abaixo de trás para frente.
 
@@ -279,4 +279,4 @@ a.reverse()
 print(a)
 ````
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex1_secao3.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_2/Evidencias/ex14-parte1.jpg)
