@@ -1,6 +1,6 @@
 ## <p align="center"> EXERCÍCIOS - PARTE 2</p>
 
-**2.** Implemente duas classes, Pato e Pardal , que herdam de uma superclasse chamada Passaro as habilidades de voar e emitir som.
+**15.** Implemente duas classes, Pato e Pardal , que herdam de uma superclasse chamada Passaro as habilidades de voar e emitir som.
 
 Contudo, tanto Pato quanto Pardal devem emitir sons diferentes (de maneira escrita) no console, conforme o modelo a seguir.
 
@@ -53,7 +53,7 @@ pardal.voar()
 pardal.emitir_som()
 ````
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex1_secao3.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_2/Evidencias/ex15-parte2.jpg)
 
 **16.** Crie uma classe chamada Pessoa, com um atributo privado chamado nome (declarado internamente na classe como __nome) e um atributo público de nome id.
 
@@ -76,7 +76,7 @@ class Pessoa:
         self.__nome = valor
 ````
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex1_secao3.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_2/Evidencias/ex16-parte2.jpg)
 
 **17.** Crie uma classe  Calculo  que contenha um método que aceita dois parâmetros, X e Y, e retorne a soma dos dois. Nessa mesma classe, implemente um método de subtração, que aceita dois parâmetros, X e Y, e retorne a subtração dos dois (resultados negativos são permitidos).
 
@@ -108,7 +108,7 @@ print(f"Somando: {x}+{y} = {calc.somar(x, y)}")
 print(f"Subtraindo: {x}-{y} = {calc.subtrair(x, y)}")
 ````
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex1_secao3.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_2/Evidencias/ex17-parte2.jpg)
 
 **18.** Crie uma classe Ordenadora que contenha um atributo listaBaguncada e que contenha os métodos ordenacaoCrescente e ordenacaoDecrescente.
 
@@ -139,9 +139,9 @@ print(f"1 | {crescente.ordenacaoCrescente()}")
 print(f"2 | {decrescente.ordenacaoDecrescente()}")
 ````
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex1_secao3.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_2/Evidencias/ex18-parte2.jpg)
 
-**18.** Crie uma classe Avião que possua os atributos modelo, velocidade_maxima, cor e capacidade.
+**19.** Crie uma classe Avião que possua os atributos modelo, velocidade_maxima, cor e capacidade.
 
 Defina o atributo cor de sua classe , de maneira que todas as instâncias de sua classe avião sejam da cor “azul”.
 
@@ -182,4 +182,4 @@ for aviao in lista_avioes:
           f'capacidade para {aviao.capacidade} passageiros e é da cor {aviao.cor}.')
 ````
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex1_secao3.jpg)
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_2/Evidencias/ex19-parte2.jpg)
