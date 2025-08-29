@@ -98,3 +98,118 @@ print(calcula_saldo(lancamentos))
 ````
 
 - [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex1_secao3.jpg)
+
+**23.** A função calcular_valor_maximo deve receber dois parâmetros, chamados de operadores e operandos. Em operadores, espera-se uma lista de caracteres que representam as operações matemáticas suportadas (+, -, /, *, %), as quais devem ser aplicadas à lista de operadores nas respectivas posições. Após aplicar cada operação ao respectivo par de operandos, a função deverá retornar o maior valor dentre eles.
+
+Na resolução da atividade você deverá aplicar as seguintes funções:
+
+max<br>
+zip<br>
+map
+
+````py
+def calcular_valor_maximo(operadores, operandos) -> float:
+    ops = {
+        '+': lambda a, b: a + b,
+        '-': lambda a, b: a - b,
+        '*': lambda a, b: a * b,
+        '/': lambda a, b: a / b,
+        '%': lambda a, b: a % b
+    }
+
+    resultados = map(lambda ob: ops[ob[0]](*ob[1]), zip(operadores, operandos))
+
+    return max(resultados)
+
+
+# testando
+operadores = ['+','-','*','/','+']
+operandos  = [(3,6), (-7,4.9), (8,-8), (10,2), (8,4)]
+
+print("Maior valor:", calcular_valor_maximo(operadores, operandos))
+````
+
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex1_secao3.jpg)
+
+**24.** Um determinado sistema escolar exporta a grade de notas dos estudantes em formato CSV. Cada linha do arquivo corresponde ao nome do estudante, acompanhado de 5 notas de avaliação, no intervalo [0-10]. É o arquivo estudantes.csv de seu exercício.
+
+Precisamos processar seu conteúdo, de modo a gerar como saída um relatório em formato textual contendo as seguintes informações:
+
+Nome do estudante
+
+Três maiores notas, em ordem decrescente
+
+Média das três maiores notas, com duas casas decimais de precisão
+
+O resultado do processamento deve ser escrito na saída padrão (print), ordenado pelo nome do estudante e obedecendo ao formato descrito a seguir:
+
+Nome: <nome estudante> Notas: [n1, n2, n3] Média: <média>
+
+Em seu desenvolvimento você deverá utilizar lambdas e as seguintes funções:
+
+round<br>
+map<br>
+sorted
+
+````
+with open('estudantes.csv', 'r', encoding='utf-8') as arquivo:
+    conteudo_arquivo = arquivo.readlines()
+
+def processar_conteudo(linha):
+    dados = linha.strip().split(',')
+    nome_estudante = dados[0]
+    lista_notas = list(map(int, dados[1:]))
+    notas_selecionadas = sorted(lista_notas, reverse=True)[:3]
+    media_calculada = round(sum(notas_selecionadas) / 3, 2)
+    return (nome_estudante, f"Nome: {nome_estudante} Notas: {notas_selecionadas} Média: {media_calculada}")
+
+relatorio_final = sorted(map(processar_conteudo, conteudo_arquivo), key=lambda x: x[0])
+
+for _, relatorio in relatorio_final:
+    print(relatorio)
+````
+
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex1_secao3.jpg)
+
+**25.** Você foi encarregado de desenvolver uma nova feature  para um sistema de gestão de supermercados. O analista responsável descreveu o requisito funcional da seguinte forma:
+
+Para realizar um cálculo de custo, o sistema deverá permitir filtrar um determinado conjunto de produtos, de modo que apenas aqueles cujo valor unitário for superior à média deverão estar presentes no resultado. 
+
+````py
+def maiores_que_media(conteudo: dict) -> list:
+    # Calculando a média dos preços
+    media = sum(conteudo.values()) / len(conteudo)
+
+    # Selecionando os produtos com preço maior que a média
+    acima_media = [(produto, preco) for produto, preco in conteudo.items() if preco > media]
+
+    # Ordenando a lista pelo preço em ordem crescente
+    acima_media.sort(key=lambda x: x[1])
+
+    # Retornando o resultado
+    return acima_media
+    
+#Exibindo o resultado
+print(maiores_que_media({"arroz": 4.99, "feijão": 3.49, "macarrão": 2.99,"leite": 3.29,"pão": 1.99}))
+````
+
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex1_secao3.jpg)
+
+**26.** Generators são poderosos recursos da linguagem Python. Neste exercício, você deverá criar o corpo de uma função, cuja assinatura já consta em seu arquivo de início (def pares_ate(n:int):) .
+
+O objetivo da função pares_ate é retornar um generator para os valores pares no intervalo [2,n] . Observe que n representa o valor do parâmetro informado na chamada da função.
+
+````py
+def pares_ate(n: int):
+    for i in range(2, n+1, 2):  # Começa em 2 e vai até o n, pulando de dois em dois
+        yield i  # yield transforma a função em um generator
+        
+# Testando
+# Criando o generator
+g = pares_ate(15)
+
+for n in g:
+    print(n)
+````
+
+- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_1/Evidencias/Evidencias-exercicios/ex1_secao3.jpg)
