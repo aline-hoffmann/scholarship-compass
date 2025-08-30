@@ -26,7 +26,7 @@ A segunda etapa foi realizada seguindo [esses passos](https://github.com/aline-h
 
 ### Item 3 - Gráfico de pizza com as categorias de apps existentes no dataset de acordo com a frequência em que elas aparecem.
 
-<img src="categorias-pizza."/>
+<img src="categorias-pizza.png"/>
 
 ### Item 8 - Gráfico "donut" com os top 5 apps do gênero beauty.
 
