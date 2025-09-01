@@ -30,7 +30,7 @@ print(cinco_maiores_pares)
 print(soma)
 ````
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_2/Evidencias/ex20-parte3.jpg)
+![imagem](../Evidencias/ex20-parte3.jpg)
 
 **21.** Utilizando high order functions, implemente o corpo da função conta_vogais. O parâmetro de entrada será uma string e o resultado deverá ser a contagem de vogais presentes em seu conteúdo.
 
@@ -58,7 +58,7 @@ print(conta_vogais(frase))
 # Verificado que sim pois em ambas as frases são contados 10, desconsiderando o "é"
 ````
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_2/Evidencias/ex21-parte3.jpg)
+![imagem](../Evidencias/ex21-parte3.jpg)
 
 **22.** A função calcula_saldo recebe uma lista de tuplas, correspondendo a um conjunto de lançamentos bancários. Cada lançamento é composto pelo seu valor (sempre positivo) e pelo seu tipo (C - crédito ou D - débito). 
 
@@ -97,7 +97,7 @@ lancamentos = [
 print(calcula_saldo(lancamentos))
 ````
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_2/Evidencias/ex22-parte3.jpg)
+![imagem](../Evidencias/ex22-parte3.jpg)
 
 **23.** A função calcular_valor_maximo deve receber dois parâmetros, chamados de operadores e operandos. Em operadores, espera-se uma lista de caracteres que representam as operações matemáticas suportadas (+, -, /, *, %), as quais devem ser aplicadas à lista de operadores nas respectivas posições. Após aplicar cada operação ao respectivo par de operandos, a função deverá retornar o maior valor dentre eles.
 
@@ -129,7 +129,7 @@ operandos  = [(3,6), (-7,4.9), (8,-8), (10,2), (8,4)]
 print("Maior valor:", calcular_valor_maximo(operadores, operandos))
 ````
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_2/Evidencias/ex23-parte3.jpg)
+![imagem](../Evidencias/ex23-parte3.jpg)
 
 **24.** Um determinado sistema escolar exporta a grade de notas dos estudantes em formato CSV. Cada linha do arquivo corresponde ao nome do estudante, acompanhado de 5 notas de avaliação, no intervalo [0-10]. É o arquivo estudantes.csv de seu exercício.
 
@@ -169,7 +169,7 @@ for _, relatorio in relatorio_final:
     print(relatorio)
 ````
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_2/Evidencias/ex24-parte3.jpg)
+![imagem](../Evidencias/ex24-parte3.jpg)
 
 **25.** Você foi encarregado de desenvolver uma nova feature  para um sistema de gestão de supermercados. O analista responsável descreveu o requisito funcional da seguinte forma:
 
@@ -193,7 +193,7 @@ def maiores_que_media(conteudo: dict) -> list:
 print(maiores_que_media({"arroz": 4.99, "feijão": 3.49, "macarrão": 2.99,"leite": 3.29,"pão": 1.99}))
 ````
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_2/Evidencias/ex25-parte3.jpg)
+![imagem](../Evidencias/ex25-parte3.jpg)
 
 **26.** Generators são poderosos recursos da linguagem Python. Neste exercício, você deverá criar o corpo de uma função, cuja assinatura já consta em seu arquivo de início (def pares_ate(n:int):) .
 
@@ -212,4 +212,4 @@ for n in g:
     print(n)
 ````
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_2/Evidencias/ex26-parte3.jpg)
+![imagem](../Evidencias/ex26-parte3.jpg)
