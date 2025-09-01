@@ -15,7 +15,7 @@ impares = [n for n in a if n % 2 != 0]
 print(impares)
 ````
 
-- [Link para evidência](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_2/Evidencias/ex1-parte1.jpg)
+![imagem](../Evidencias/ex1-parte1.jpg)
 
 <br>
 
