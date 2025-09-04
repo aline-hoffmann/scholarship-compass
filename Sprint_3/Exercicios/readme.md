@@ -56,7 +56,6 @@ docker run -it -v "%cd%:/app" mascarar dados
 ### Execução do container
 ![imagem](../Evidencias/Exercicios/execucao-mascarar.jpg)
 
-
 <br>
 <br>
 
