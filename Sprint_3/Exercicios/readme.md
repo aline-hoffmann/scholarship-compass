@@ -57,6 +57,5 @@ docker run -it -v "%cd%:/app" mascarar dados
 ![imagem](../Evidencias/Exercicios/execucao-mascarar.jpg)
 
 <br>
-<br>
 
 ## [EVIDÊNCIAS](https://github.com/aline-hoffmann/scholarship-compass/tree/main/Sprint_3/Evidencias/Exercicios)
