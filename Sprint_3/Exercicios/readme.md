@@ -23,9 +23,9 @@ docker run -it -v "%cd%:/app" carguru:1.0 bash
 ![imagem](../Evidencias/Exercicios/execucao-carguru.jpg)
 
 ## ETAPA 2
-Na segunda etapa, foi preciso criar o script python no Dockerfile, para então criar a imagem e executar o container apartir dela.
+Na segunda etapa, foi preciso criar o script python no Dockerfile, para então criar a imagem e executar o container partindo dela.
 
-## Script python
+### Script python
 Eu utilizei a biblioteca hashlib no script Python para transformar qualquer string digitada pelo usuário em um hash SHA-1. O programa funcionava em um laço infinito (while True), onde era solicitado que a pessoa inserisse uma string pelo teclado. Em seguida, essa string era convertida em bytes, o hash era gerado com hashlib.sha1() e o resultado era exibido em formato hexadecimal com hexdigest(). Após isso, o programa retornava ao início e pedia uma nova entrada, repetindo o processo até ser interrompido manualmente (por exemplo, com Ctrl+C).
 
 ````
@@ -37,7 +37,7 @@ while True:
     print("Hash SHA-1:", hash_obj.hexdigest())
 ````
 
-## Dockerfile
+### Dockerfile
 ![imagem](../Evidencias/Exercicios/Dockerfile-etapa2.jpg)
 
 ### Imagem
