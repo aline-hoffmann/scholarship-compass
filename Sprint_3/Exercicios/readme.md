@@ -59,4 +59,5 @@ docker run -it -v "%cd%:/app" mascarar dados
 
 <br>
 <br>
+
 ## [EVIDÊNCIAS](https://github.com/aline-hoffmann/scholarship-compass/tree/main/Sprint_3/Evidencias/Exercicios)
