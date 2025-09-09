@@ -2,7 +2,9 @@ import pandas as pd
 import re
 
 # Lendo o arquivo csv
-df = pd.read_csv("concert_tours_by_women.csv")
+
+csv_file = r"C:\Users\josim\OneDrive\Área de Trabalho\ALINE\CC\COMPASS\scholarship-compass\Sprint_3\Desafio\etapa-1\concert_tours_by_women.csv"
+df = pd.read_csv(csv_file)
 
 # Selecionando só as colunas que quero manter, seguindo o modelo fornecido no desafio
 df = df[[
@@ -68,8 +70,8 @@ def limpa_texto(txt):
     if pd.isna(txt):
         return txt
     txt = str(txt)
-    txt = re.sub(r"\[.*?\]", "", txt)
-    txt = re.sub(r"[†‡]", "", txt)
+    txt = re.sub(r"\[.*?\]", "", txt)         
+    txt = re.sub(r"[†‡*]", "", txt)          
     txt = re.sub(r"\s*\d+[a-zA-Z]$", "", txt)
     return txt.strip()
 
