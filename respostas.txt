@@ -1,0 +1,11 @@
+Q1:
+A artista que mais aparece na lista e possui maior média de seu faturamento bruto é Taylor Swift, com média de $381,518,786.50 USD. 
+
+Q2:
+A turnê que aconteceu dentro de um único ano e teve a maior média de faturamento bruto (Average gross) foi 'Renaissance World Tour' da artista Beyoncé, com média de faturamento de $10,353,571.00 USD. 
+
+Q3:
+As 3 turnês mais lucrativas por show (em dólares ajustados de 2022):
+1. The Eras Tour — Taylor Swift — Bruto por show: $13,928,571.43
+2. Renaissance World Tour — Beyoncé — Bruto por show: $10,353,571.43
+3. Reputation Stadium Tour — Taylor Swift — Bruto por show: $7,600,846.21

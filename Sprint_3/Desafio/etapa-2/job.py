@@ -110,13 +110,14 @@ shows_por_artista = df.groupby("Artist")["Shows"].sum()
 top5_artistas_shows = shows_por_artista.sort_values(ascending=False).head(5)
 
 # Criando o gráfico de barras para visualizar o resultado
-plt.figure(figsize=(9,5))
-plt.bar(top5_artistas_shows.index, top5_artistas_shows.values, color="deeppink", zorder=3)
+plt.figure(figsize=(9,6))
+bars=plt.bar(top5_artistas_shows.index, top5_artistas_shows.values, color="deeppink", zorder=3)
+
 plt.title("TOP CINCO ARTISTAS POR NÚMERO DE SHOWS",fontweight="bold")
 plt.xlabel("ARTISTAS", labelpad=20, fontweight="bold")
 plt.ylabel("NÚMERO DE SHOWS", labelpad=20, fontweight="bold")
+plt.bar_label(bars, labels=[f"{int(v)}" for v in top5_artistas_shows.values], fontsize=10, fontweight="bold")
 
-# Colocando o tracejado atrás das barras e salvando a imagem do gráfico
 plt.grid(True, linestyle="--", alpha=0.6)
 plt.tight_layout()
 plt.savefig("questao-5.png", dpi=300, bbox_inches="tight")
