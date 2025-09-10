@@ -85,22 +85,25 @@ df_artista = df[df["Artist"] == artista_q4]
 faturamento_por_ano = df_artista.groupby("Start year")["Actual gross"].sum()
 
 # Criando o gráfico de linhas para visualizar o resultado
-plt.figure(figsize=(9,5))
-plt.plot(faturamento_por_ano.index, faturamento_por_ano.values, marker="o", linestyle="-", color="deeppink")
-plt.title(f"FATURAMENTO POR ANO DA TURNÊ - {artista_mais_frequente}", fontweight="bold")
-plt.xlabel("ANO DE INÍCIO DA TURNÊ", labelpad=20, fontweight="bold")
-plt.ylabel("FATURAMENTO BRUTO (US$)", labelpad=20, fontweight="bold")
-plt.xticks(faturamento_por_ano.index)
+with plt.style.context('dark_background'):
+    plt.figure(figsize=(9,5))
+    plt.plot(faturamento_por_ano.index, faturamento_por_ano.values, marker="o", linestyle="-", color="deeppink")
 
-# Organizando o eixo y de 100 em 100 milhoões
-max_val = faturamento_por_ano.max()
-yticks = range(0, int(max_val) + 100_000_000, 100_000_000)
-plt.yticks(yticks, [f"{y//1_000_000}M" for y in yticks])
+    plt.title(f"FATURAMENTO POR ANO DA TURNÊ - {artista_mais_frequente}", fontweight="bold")
+    plt.xlabel("ANO DE INÍCIO DA TURNÊ", labelpad=20, fontweight="bold")
+    plt.ylabel("FATURAMENTO BRUTO (US$)", labelpad=20, fontweight="bold")
+    plt.xticks(faturamento_por_ano.index)
 
-# Colocando o tracejado atrás das linhas e salvando a imagem do gráfico
-plt.grid(True, linestyle="--", alpha=0.8)
-plt.tight_layout()
-plt.savefig("questao-4.png", dpi=300)
+    # Organizando o eixo y de 100 em 100 milhões
+    max_val = faturamento_por_ano.max()
+    yticks = range(0, int(max_val) + 100_000_000, 100_000_000)
+    plt.yticks(yticks, [f"{y//1_000_000}M" for y in yticks])
+
+    # Grid
+    plt.grid(True, linestyle="--", alpha=0.8)
+    plt.tight_layout()
+    plt.savefig("questao-4.png", dpi=300)
+    plt.close()
 
 # QUESTÃO 5
 # Descobrindo a quantidade de shows por artista
@@ -121,3 +124,4 @@ plt.bar_label(bars, labels=[f"{int(v)}" for v in top5_artistas_shows.values], fo
 plt.grid(True, linestyle="--", alpha=0.6)
 plt.tight_layout()
 plt.savefig("questao-5.png", dpi=300, bbox_inches="tight")
+plt.close()
