@@ -135,3 +135,19 @@ top5_artistas_shows = shows_por_artista.sort_values(ascending=False).head(5)
 Ademais, criei um gráfico de barras para demonstrar o resultado e salvei a imagem na pasta volume também.
 
 ![imagem](../Evidencias/Desafio/questao-5.png)
+
+## ETAPA 3
+Nessa terceira etapa, criei um arquivo Dockerfile com o script etl criado na etapa um.
+
+![imagem](../Evidencias/Desafio/Dockerfile-etapa1.jpg)
+
+Esse arquivo pode ser visualizado [aqui](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_3/Desafio/etapa-1/Dockerfile).
+
+## ETAPA 4
+Na quarta etapa, também criei um arquivo Dockerfile, porém, dessa vez com o script job criado na etapa dois.
+
+![imagem](../Evidencias/Desafio/Dockerfile-etapa2.jpg)
+
+Esse arquivo pode ser visualizado [aqui](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_3/Desafio/etapa-2/Dockerfile).
+
+## ETAPA 5
