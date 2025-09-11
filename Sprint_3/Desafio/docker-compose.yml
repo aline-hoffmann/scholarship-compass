@@ -1,0 +1,16 @@
+services:
+  etapa1:
+    build: ./etapa-1
+    container_name: etapa1_container
+    volumes:
+      - ./volume:/app/../volume
+    command: python etl.py
+
+  etapa2:
+    build: ./etapa-2
+    container_name: etapa2_container
+    volumes:
+      - ./volume:/app/../volume
+    command: python job.py
+    depends_on:
+      - etapa1

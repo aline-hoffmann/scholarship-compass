@@ -1,9 +1,11 @@
 import pandas as pd
 import re
+import os
 
 # Lendo o arquivo csv
+base_dir = os.path.dirname(__file__)
+csv_file = os.path.join(base_dir, "concert_tours_by_women.csv")
 
-csv_file = r"C:\Users\josim\OneDrive\Área de Trabalho\ALINE\CC\COMPASS\scholarship-compass\Sprint_3\Desafio\etapa-1\concert_tours_by_women.csv"
 df = pd.read_csv(csv_file)
 
 # Selecionando só as colunas que quero manter, seguindo o modelo fornecido no desafio
@@ -77,4 +79,5 @@ def limpa_texto(txt):
 
 df["Tour title"] = df["Tour title"].apply(limpa_texto)
 
-df.to_csv("csv_limpo.csv", index=False)
+output_path = os.path.join(os.path.dirname(__file__), "..", "volume", "csv_limpo.csv")
+df.to_csv(output_path, index=False, encoding="utf-8")

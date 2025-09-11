@@ -2,9 +2,11 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+import os
 
 # Lendo o arquivo csv já limpo
-csv_file = r"C:\Users\josim\OneDrive\Área de Trabalho\ALINE\CC\COMPASS\scholarship-compass\Sprint_3\Desafio\etapa-1\csv_limpo.csv"
+base_dir = os.path.dirname(__file__)
+csv_file = os.path.join(base_dir, "..", "volume", "csv_limpo.csv")
 
 df = pd.read_csv(csv_file)
 
@@ -66,7 +68,8 @@ respostas = (
     f"{resposta_q3}"
 )
 
-with open("respostas.txt", "w", encoding="utf-8") as f:
+txt_path = os.path.join(base_dir, "..", "volume", "respostas.txt")
+with open(txt_path, "w", encoding="utf-8") as f:
     f.write(respostas)
 
 # QUESTÃO 4
@@ -102,7 +105,8 @@ with plt.style.context('dark_background'):
     # Grid
     plt.grid(True, linestyle="--", alpha=0.8)
     plt.tight_layout()
-    plt.savefig("questao-4.png", dpi=300)
+    img_q4_path = os.path.join(base_dir, "..", "volume", "questao-4.png")
+    plt.savefig(img_q4_path, dpi=300)    
     plt.close()
 
 # QUESTÃO 5
@@ -123,5 +127,6 @@ plt.bar_label(bars, labels=[f"{int(v)}" for v in top5_artistas_shows.values], fo
 
 plt.grid(True, linestyle="--", alpha=0.6)
 plt.tight_layout()
-plt.savefig("questao-5.png", dpi=300, bbox_inches="tight")
+img_q5_path = os.path.join(base_dir, "..", "volume", "questao-5.png")
+plt.savefig(img_q5_path, dpi=300, bbox_inches="tight")
 plt.close()
