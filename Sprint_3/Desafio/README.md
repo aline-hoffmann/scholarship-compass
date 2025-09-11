@@ -47,7 +47,9 @@ output_path = os.path.join(os.path.dirname(__file__), "..", "volume", "csv_limpo
 df.to_csv(output_path, index=False, encoding="utf-8")
 ````
 
-O arquivo etl.py pode ser lido [aqui](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_3/Desafio/etapa-1/etl.py) na íntegra.
+O arquivo etl.py pode ser lido [aqui](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_3/Desafio/etapa-1/etl.py) na íntegra e ficou assim:
+
+![imagem](../Evidencias/Desafio/csv_limpo.jpg) 
 
 ## ETAPA 2 - Questões
 Para a resolução das questões da segunda etapa, também utilizei primeiro o jupyter notebook e o arquivo dele está [aqui](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_3/Desafio/etapa-2/job.ipynb).
@@ -151,3 +153,26 @@ Na quarta etapa, também criei um arquivo Dockerfile, porém, dessa vez com o sc
 Esse arquivo pode ser visualizado [aqui](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_3/Desafio/etapa-2/Dockerfile).
 
 ## ETAPA 5
+Nessa última etapa eu criei o arquivo docker-compose.yml para conectar os dois containers do desafio. Nesse arquivo eu defini dois serviços, etapa1 e etapa2.
+
+O primeiro (etapa1) foi responsável por rodar o etl.py. Para isso, eu defini o build apontando para a pasta ./etapa-1, configurei o nome do container como etapa1_container, montei o volume para que tudo o que fosse gerado ficasse salvo na pasta volume do meu computador e defini o comando para rodar o script do ETL.
+
+O segundo serviço (etapa2), ficou responsável por rodar o job.py. Ele foi construído a partir da pasta ./etapa-2, recebeu o nome de etapa2_container, utilizou o mesmo volume para ter acesso ao csv_limpo.csv gerado na etapa anterior e executou o comando que rodava o script de análise.
+
+Para garantir que a ordem fosse respeitada, eu utilizei a diretiva depends_on. Dessa forma, o etapa2 só começava depois que o etapa1 tivesse rodado.
+
+
+![imagem](../Evidencias/Desafio/docker-compose.jpg)
+
+Com essa configuração, eu executei o seguinte comando no terminal:
+
+````
+docker-compose up --build
+````
+
+Assim, o container da etapa 1 realizou a limpeza dos dados e gerou o arquivo csv_limpo.csv dentro do volume. Em seguida, o container da etapa 2 leu esse arquivo já limpo, respondeu as questões, criou o arquivo respostas.txt e gerou os gráficos questao-4.png e questao-5.png.
+
+![imagem](../Evidencias/Desafio/execucao-docker-compose.jpg)
+
+Por fim, todos os resultados ficaram disponíveis na pasta volume do meu computador, garantindo que mesmo após o término dos containers, os arquivos continuem acessíveis. Essa pasta pode ser acessada [aqui](https://github.com/aline-hoffmann/scholarship-compass/tree/main/Sprint_3/Desafio/volume).
+
