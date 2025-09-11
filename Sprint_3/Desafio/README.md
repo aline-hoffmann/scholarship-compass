@@ -31,7 +31,9 @@ def limpa_dinheiro(valor):
     return float(valor)
 ````
 
-Ademais, alterei os tipos das colunas e, nas de texto, transformei tudo em string e removi possiveis espaçoes em branco.
+Ademais, alterei os tipos das colunas e, nas de texto, transformei tudo em string e removi possíveis espaçoes em branco. Além disso, renomeei a coluna "Adjustedgross (in 2022 dollars)" para seguir o modelo fornecido.
+
+![imagem](../Evidencias/Desafio/tipos-colunas.jpg)
 
 Na coluna "Tour Tittle" foi necessário fazer uma limpeza mais profunda, pois existiam muitos tipos de símbolos nos nomes das turnês.
 
