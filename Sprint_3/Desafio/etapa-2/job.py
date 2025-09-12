@@ -39,7 +39,7 @@ resposta_q1 = (
 # Verificando se existe pelo menos uma turnê que começou e terminou no mesmo ano
 turnes_mesmo_ano = df[df["Start year"] == df["End year"]]
 
-# Selecionando qual dessas turnês que começaram e terminaram no mesmo ano teve a maior média de faturmento bruto ("Actual gross")
+# Selecionando qual dessas turnês que começaram e terminaram no mesmo ano teve a maior média de faturmento bruto
 maior_gross = turnes_mesmo_ano.loc[turnes_mesmo_ano["Average gross"].idxmax()]
 
 resposta_q2 = f"Q2:\nA turnê que aconteceu dentro de um único ano e teve a maior média de faturamento bruto (Average gross) foi '{maior_gross['Tour title']}' da artista {maior_gross['Artist']}, com média de faturamento de ${maior_gross['Average gross']:,.2f} USD."
