@@ -111,3 +111,40 @@ ORDER BY decada, total_nome DESC;
 ````
 
 ![imagem](../Evidencias/Exercicios/LAB-ATHENA/nomes-decada.jpg)
+
+<br>
+
+## LAB AWS LAMBDA
+Em um primeiro momento, criei a função com o nome de "myLambdaFunction" e testei. Porém, como esperado, ao executar o teste apresentou um erro. 
+
+![imagem](../Evidencias/Exercicios/LAB-LAMBDA/primeiro-teste.jpg)
+
+Esse erro ocorreu pois o Lambda não possui a biblioteca pandas instalada por padrão. Sendo assim, precisei criar uma layer.
+
+Criei uma pasta chamada python dentro de um diretório "layer_dir". Após isso, usei Docker com a imagem do Amazon Linux para instalar as bibliotecas nesse diretório.
+
+Dentro do container rodei o seguinte comando para instalar as dependências do pandas dentro da pasta "python".
+
+````
+pip3 install pandas -t .
+````
+
+Ademais, na pasta "layer_dir", rodei o comando a seguir para compactar o diretório "python".
+
+````
+zip -r minha-camada-pandas.zip .
+````
+![imagem](../Evidencias/Exercicios/LAB-LAMBDA/compactando-dir-py.jpg)
+
+
+Com o arquivo "minha-camada-pandas.zip" compactado, fiz o upload dele para o meu bucket S3.
+
+![imagem](../Evidencias/Exercicios/LAB-LAMBDA/upload-bucket.jpg)
+
+Outrossim, criei a camada "PandasLayer".
+
+![imagem](../Evidencias/Exercicios/LAB-LAMBDA/camada-criada.jpg)
+
+Com a camada criada, adicionei a mesma dentro da função "myLambdaFunction" e testei novamente o código, dessa vez obtendo sucesso.
+
+![imagem](../Evidencias/Exercicios/LAB-LAMBDA/funcionando.jpg)
