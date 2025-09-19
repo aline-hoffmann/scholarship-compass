@@ -1,7 +1,13 @@
-CERTIFICAÇÕES
+## CERTIFICAÇÕES
 
-[AWS Cloud Quest: Praticante de nuvem](https://www.credly.com/badges/a9facc26-7064-4950-9d0d-f4e56f1c8184)
+[**AWS Cloud Quest: Praticante de nuvem**](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_4/Certificados/certifcado-cloud-quest.pdf)
 
-[AWS Partner: Sales Accreditation](https://www.credly.com/badges/cb2e5932-b845-428a-98c9-e70c75f63c7c)
+![imagem](./Evidencias/Certificados/cloud-quest.jpg)
 
-[AWS Partner: Cloud Economics Essentials](https://www.credly.com/badges/22f5e524-8a5a-4877-9e55-4d37413bc27d)
+[**AWS Partner: Sales Accreditation**](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_4/Certificados/certificado-sales-accreditation.pdf)
+
+![imagem](./Evidencias/Certificados/sales-accreditation.jpg)
+
+[**AWS Partner: Cloud Economics Essentials**](https://www.credly.com/badges/22f5e524-8a5a-4877-9e55-4d37413bc27d)
+
+![imagem](./Evidencias/Certificados/badge-cloud-ec.jpg)
