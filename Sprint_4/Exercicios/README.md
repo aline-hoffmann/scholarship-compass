@@ -148,3 +148,15 @@ Outrossim, criei a camada "PandasLayer".
 Com a camada criada, adicionei a mesma dentro da função "myLambdaFunction" e testei novamente o código, dessa vez obtendo sucesso.
 
 ![imagem](../Evidencias/Exercicios/LAB-LAMBDA/funcionando.jpg)
+
+## LIMPEZA DE RECURSOS
+
+Após finalizar os laboratórios, realizei a limpeza de tudo que foi criado para não incorrer em custos desnecessários.
+
+Sendo assim, excluí meu bucket, funções e tabelas que havia utilizado para a realização dos laboratórios.
+
+![imagem](../Evidencias/Exercicios/Limpeza/excluindo-bucket.jpg)
+
+![imagem](../Evidencias/Exercicios/Limpeza/excluindo-function.jpg)
+
+![imagem](../Evidencias/Exercicios/Limpeza/excluindo-tab.jpg)
