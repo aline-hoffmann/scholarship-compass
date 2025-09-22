@@ -11,3 +11,14 @@
 [**AWS Partner: Cloud Economics Essentials**](https://www.credly.com/badges/22f5e524-8a5a-4877-9e55-4d37413bc27d)
 
 ![imagem](./Evidencias/Certificados/badge-cloud-ec.jpg)
+
+
+Antes de qualquer coisa, estudei sobre variáveis de ambiente para me sentir segura utilizando as credenciais da AWS. Sendo assim, fiz a instalação da biblioteca "dotenv" através do comando a seguir:
+
+````
+pip install python-dotenv
+````
+
+Depois de definidas as variáveis, iniciei a realização do desafio.
+
+## ETAPA 1
