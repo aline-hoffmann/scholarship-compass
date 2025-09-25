@@ -1,7 +1,9 @@
-## ETAPA 1
+## **ETAPA 1**
 Primeiramente, defini os questionamentos que iria responder com a análise dos dados "Feminicídios 2023 - Estado de Minas Gerais, sendo eles:
 
-QUESTIONAMENTOS AQUI!!!!!!!!!!!!!!
+1) Será que o dia da semana influencia no feminicídio? Verifique o número de vítimas em cada dia da semana.
+2) Qual a média de vítimas no município de Belo Horizonte? Classifique a média como Alta (≥ 2) ou Baixa (< 2).
+3) Liste os cinco municípios com mais vítimas, considerando apenas os registros consumados.
 
 Após a importação da biblioteca "boto3" para interagir com a AWS, criei o bucket "aline-hp-pb", através do comando a seguir e verifiquei o mesmo no painel da AWS.
 
@@ -19,7 +21,7 @@ s3.upload_file(arquivo_local, bucket_name, nome_s3)
 
 ![imagem](../Evidencias/Desafio/upload-dados.jpg)
 
-## ETAPA 2
+## **ETAPA 2**
 
 Antes de começar a responder os questinamentos, realizei a limpeza dos dados. Para fazer a leitura do arquivo csv, utilizei o parâmetro sep=";", já que o pandas por padrão espera a separação por vírgula.
 
@@ -33,7 +35,7 @@ Após isso, excluí as colunas "risp" e "rmbh" pois não vou utilizar para a an�
 df = df.drop(columns=["risp", "rmbh"])
 ````
 
-Seguindo a limpeza, conferi os tipos de dados das colunaa através do "df.dtypes" e padronizei as com valores númericos, datas e strings.
+Seguindo a limpeza, conferi os tipos de dados das coluna através do "df.dtypes" e padronizei as com valores númericos, datas e strings.
 
 ````
 df["municipio_cod"] = pd.to_numeric(df["municipio_cod"], errors="coerce", downcast="integer")
@@ -61,3 +63,80 @@ Para garantir  o padrão, consultei se na coluna "tentado_consumado" só existia
 Por fim, verifiquei se existia algum valor nulo.
 
 ![imagem](../Evidencias/Desafio/NAN.jpg)
+
+Salvei o arquivo csv depois da limpeza de dados e comecei as análises.
+
+### **QUESTIONAMENTO 1.**
+Qual o total de vítimas para cada dia da semana?
+
+Para iniciar, garanti que a coluna "data_fato" estivesse no formato datatime e, logo após, criei uma nova coluna com os dias da semana, chamando de "dia_semana".
+
+![imagem](../Evidencias/Desafio/coluna-dia-semana.jpg)
+
+Para padronizar os dados na língua portuguesa, fiz a tradução.
+
+````
+# Traduzindo os dias da semana para português
+traducao_dias = {
+    "Monday": "segunda_feira",
+    "Tuesday": "terça_feira",
+    "Wednesday": "quarta_feira",
+    "Thursday": "quinta_feira",
+    "Friday": "sexta_feira",
+    "Saturday": "sábado",
+    "Sunday": "domingo"
+}
+df["dia_semana"] = df["dia_semana"].replace(traducao_dias)
+````
+
+Depois de traduzidos os dias da semana, agrupei-os e somei a quantidade de vítimas em cada um deles.
+
+![imagem](../Evidencias/Desafio/vit-dias-semana.jpg)
+
+Após isso, reordenei o resultado para que fossem mostrados os dias da semana na ordem correta.
+
+````
+ordem_dias = ["segunda_feira", "terça_feira", "quarta_feira", "quinta_feira", "sexta_feira", "sábado", "domingo"]
+
+vitimas_por_dia = vitimas_por_dia.set_index("dia_semana").reindex(ordem_dias).reset_index()
+````
+
+Sendo assim, verificando o resultado final, **obtive a resposta do meu questionamento: sim. Existe influência dos dias da semana nos casos de feminicídio, vez que aos finais de semana existe uma maior quantidade de ocorrências em comparação com os demais dias.**
+
+![imagem](../Evidencias/Desafio/resp-questao1.jpg)
+
+### **QUESTIONAMENTO 2** 
+Qual a soma de cada tipo dos eventos Tentado e Consumado? A maioria dos eventos chega a ser comumado?
+
+Para fazer essa análise, iniciei filtrando apenas os resultados do município de Belo Horizonte
+
+````
+df_bh = df[df["municipio_fato"] == "BELO HORIZONTE"]
+````
+
+Após isso, calculei o total de vítimas por tipo de evento.
+
+![imagem](../Evidencias/Desafio/cons-ten-bh.jpg)
+
+Ademais, criei uma nova coluna com a classificação do tipo do evento, como o tentado sendo predominante e o consumado não predominante. Assim, **obtive a resposta do meu  questionamento: No caso dos crimes tentados, temos 15 ocorrências em Belo Horizonte. Já os consumados somam 8. Dessa forma, não, nem todos os crimes chegam a ser consumados, existe predominância da tentativa.**
+
+### **Questionamento 3.** 
+Quais os cinco municípios com mais vítimas? Considere apenas os registros consumados.
+
+Em um primeiro momento, filtrei apenas os eventos consumados.
+
+![imagem](../Evidencias/Desafio/consumados.jpg)
+
+Após isso, agrupei o resultado por municípios e somei a quantidade de vítimas.
+
+````
+totais_por_municipio = (
+    df_consumado.groupby("municipio_fato")["qtde_vitimas"].sum().reset_index()
+)
+````
+
+Além disso, ordenei os municípios em ordem descrescente e selecionei apenas os cinco primeiros. Dessa forma, **obtive a resposta do meu questionamento: Os cinco municípios com maior número de vítimas, considerando apenas eventos consumados são: Belo Horizonte, Contagem, Paracatu, Betim e Ipatinga.**
+
+![imagem](../Evidencias/Desafio/top5.jpg)
+
+
