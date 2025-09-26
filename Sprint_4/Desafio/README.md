@@ -2,8 +2,8 @@
 Primeiramente, defini os questionamentos que iria responder com a análise dos dados "Feminicídios 2023 - Estado de Minas Gerais, sendo eles:
 
 1) Será que o dia da semana influencia no feminicídio? Verifique o número de vítimas em cada dia da semana.
-2) Qual a média de vítimas no município de Belo Horizonte? Classifique a média como Alta (≥ 2) ou Baixa (< 2).
-3) Liste os cinco municípios com mais vítimas, considerando apenas os registros consumados.
+2) Qual a soma de cada tipo dos eventos Tentado e Consumado no município de Belo Horizonte? A maioria dos eventos chega a ser consumado?
+3) Quais os cinco municípios com mais vítimas? Considere apenas os registros consumados.
 
 Após a importação da biblioteca "boto3" para interagir com a AWS, criei o bucket "aline-hp-pb", através do comando a seguir e verifiquei o mesmo no painel da AWS.
 
@@ -23,13 +23,23 @@ s3.upload_file(arquivo_local, bucket_name, nome_s3)
 
 ## **ETAPA 2**
 
-Antes de começar a responder os questinamentos, realizei a limpeza dos dados. Para fazer a leitura do arquivo csv, utilizei o parâmetro sep=";", já que o pandas por padrão espera a separação por vírgula.
+Para fazer a leitura do arquivo csv, fiz a conexão com o S3 e com o meu bucket.
 
 ````
-df = pd.read_csv(dados_fem, sep=";", encoding="utf-8")
+s3 = boto3.client('s3')
+bucket = "aline-hp-pb"
+key = "dados.csv"
 ````
 
-Após isso, excluí as colunas "risp" e "rmbh" pois não vou utilizar para a análise.
+Logo após, fiz a leitura do CSV diretamente do s3.
+
+````
+obj = s3.get_object(Bucket=bucket, Key=key)
+data = obj['Body'].read().decode('utf-8')
+df = pd.read_csv(StringIO(data), sep=';')
+````
+
+Conseguindo ler o csv, iniciei a limpeza dos dados. Para começar, excluí as colunas "risp" e "rmbh" pois não vou utilizar para a análise.
 
 ````
 df = df.drop(columns=["risp", "rmbh"])
@@ -56,7 +66,7 @@ df = df.drop_duplicates()
 df = df.reset_index(drop=True)
 ````
 
-Para garantir  o padrão, consultei se na coluna "tentado_consumado" só existia valores com esses dois resultados e na coluna "ano" só existia 2023.
+Para garantir o padrão, consultei se na coluna "tentado_consumado" só existia valores com esses dois resultados e na coluna "ano" só existia 2023.
 
 ![imagem](../Evidencias/Desafio/tent-cons-2023.jpg)
 
@@ -118,7 +128,7 @@ Após isso, calculei o total de vítimas por tipo de evento.
 
 ![imagem](../Evidencias/Desafio/cons-ten-bh.jpg)
 
-Ademais, criei uma nova coluna com a classificação do tipo do evento, como o tentado sendo predominante e o consumado não predominante. Assim, **obtive a resposta do meu  questionamento: No caso dos crimes tentados, temos 15 ocorrências em Belo Horizonte. Já os consumados somam 8. Dessa forma, não, nem todos os crimes chegam a ser consumados, existe predominância da tentativa.**
+Ademais, criei uma nova coluna com a classificação do tipo do evento, como o tentado sendo predominante e o consumado não predominante. Assim, **obtive a resposta do meu  questionamento: no caso dos crimes tentados, temos 15 ocorrências em Belo Horizonte. Já os consumados somam 8. Dessa forma, não, nem todos os crimes chegam a ser consumados, existe predominância da tentativa.**
 
 ### **Questionamento 3.** 
 Quais os cinco municípios com mais vítimas? Considere apenas os registros consumados.
@@ -135,8 +145,18 @@ totais_por_municipio = (
 )
 ````
 
-Além disso, ordenei os municípios em ordem descrescente e selecionei apenas os cinco primeiros. Dessa forma, **obtive a resposta do meu questionamento: Os cinco municípios com maior número de vítimas, considerando apenas eventos consumados são: Belo Horizonte, Contagem, Paracatu, Betim e Ipatinga.**
+Além disso, ordenei os municípios em ordem descrescente e selecionei apenas os cinco primeiros. Dessa forma, **obtive a resposta do meu questionamento: os cinco municípios com maior número de vítimas, considerando apenas eventos consumados são: Belo Horizonte, Contagem, Paracatu, Betim e Ipatinga.**
 
 ![imagem](../Evidencias/Desafio/top5.jpg)
 
+Para concluir o desafio, **criei um arquivo txt com a resposta dos três  questionamentos** e realizei o envio para o meu bucket com o nome de **"respostas_analises.txt"**.
 
+````
+s3.put_object(
+    Bucket=bucket,
+    Key='respostas_analises.txt', 
+    Body=respostas.encode('utf-8') 
+)
+````
+
+![imagem](../Evidencias/Desafio/bucket-final.jpg)
