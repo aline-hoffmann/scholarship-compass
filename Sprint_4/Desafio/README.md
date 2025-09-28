@@ -19,7 +19,15 @@ Primeiramente, defini os questionamentos que iria responder com a análise dos d
 2) Qual a soma de cada tipo dos eventos Tentado e Consumado no município de Belo Horizonte? A maioria dos eventos chega a ser consumado?
 3) Quais os cinco municípios com mais vítimas? Considere apenas os registros consumados.
 
-Após a importação da biblioteca "boto3" para interagir com a AWS, criei o bucket "aline-hp-pb", através do comando a seguir e verifiquei o mesmo no painel da AWS.
+Após essa definição, escolhi a melhor maneira de realizar a conexão com a AWS e optei pelo AWS CLI, vez que com ele não precisaria me preocupar com a ocultação de credenciais, pois elas não estariam inseridas no código.
+
+Instalei o AWS CLI e fiz a configuração do mesmo pelo terminal, através do comando:
+
+````
+aws configure
+````
+
+Depois, realizei a importação da biblioteca "boto3" para interagir com a AWS. Além disso, criei o bucket "aline-hp-pb", através do comando a seguir e verifiquei o mesmo no painel da AWS.
 
 ````
 s3.create_bucket(Bucket='aline-hp-pb')
@@ -129,7 +137,7 @@ Sendo assim, verificando o resultado final, **obtive a resposta do meu questiona
 
 ![imagem](../Evidencias/Desafio/resp-questao1.jpg)
 
-### **QUESTIONAMENTO 2** 
+### **QUESTIONAMENTO 2.** 
 Qual a soma de cada tipo dos eventos Tentado e Consumado? A maioria dos eventos chega a ser comumado?
 
 Para fazer essa análise, iniciei filtrando apenas os resultados do município de Belo Horizonte
