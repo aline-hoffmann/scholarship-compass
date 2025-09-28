@@ -1,3 +1,17 @@
+# **DESAFIO**
+O objetivo do desafio era praticar o que aprendemos dos serviços AWS. Inicialmente, precisei escolher um aquivo CSV no portal de dados públicos do Governo Brasileiro e, por afinidade, optei pelos dados dos casos de feminicídio do Estado de Minas Gerais do ano de 2023.
+
+A partir desses dados, planejei análises que se basearam nas manipulações solicitadas, sendo elas:
+
+- Uma cláusula que filtra dados usando ao menos dois operadores lógicos;
+- Uma função de agregação;
+- Uma função condicional;
+- Uma função de conversão;
+- Uma função de data;
+- Uma função de string.
+
+Logo, iniciei a resolução das etapas do desafio.
+
 ## **ETAPA 1**
 Primeiramente, defini os questionamentos que iria responder com a análise dos dados "Feminicídios 2023 - Estado de Minas Gerais, sendo eles:
 
@@ -58,7 +72,7 @@ df["municipio_fato"] = df["municipio_fato"].str.strip().str.upper()
 df["tentado_consumado"] = df["tentado_consumado"].str.strip().str.upper()
 ````
 
-Ademais, removi possíveis linhas duplicadas e reorganizei o indíce, caso alguma coisa tenha sido excluída.
+Ademais, removi possíveis linhas duplicadas e reorganizei o índice, caso alguma coisa tenha sido excluída.
 
 ````
 df = df.drop_duplicates()
@@ -149,7 +163,7 @@ Além disso, ordenei os municípios em ordem descrescente e selecionei apenas os
 
 ![imagem](../Evidencias/Desafio/top5.jpg)
 
-Para concluir o desafio, **criei um arquivo txt com a resposta dos três  questionamentos** e realizei o envio para o meu bucket com o nome de **"respostas_analises.txt"**.
+Por fim, **criei um arquivo txt com a resposta dos três  questionamentos** e realizei o envio para o meu bucket com o nome de **"respostas_analises.txt"**.
 
 ````
 s3.put_object(
@@ -160,3 +174,21 @@ s3.put_object(
 ````
 
 ![imagem](../Evidencias/Desafio/bucket-final.jpg)
+
+## **CONCLUSÃO**
+
+Durante as análises, utilizei todas as manipulações solicitadas, sendo elas:
+
+- **Função de conversão:** converti a coluna data_fato para o formato datetime, garantindo que pudesse aplicar funções específicas de datas.
+
+- **Função de data:** a partir da conversão, extraí o dia da semana com .dt.day_name() e criei a coluna dia_semana.
+
+- **Função de string:** traduzi os nomes dos dias da semana do inglês para o português utilizando .replace().
+
+- **Função de agregação:** utilizei o .sum() para calcular o total de vítimas por dia da semana e também o total por município.
+
+- **Cláusula com operadores lógicos:** filtrei os dados combinando condições, como selecionar apenas registros de Belo Horizonte e ainda restringir por tipo de evento (consumado/tentado).
+
+- **Função condicional:** criei uma nova coluna que classificava os eventos como “predominante” ou “não predominante” usando if e else.
+
+Dessa forma, respondi todos os meus questionamentos e concluí o desafio.
