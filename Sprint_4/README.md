@@ -16,24 +16,34 @@ Além disso, foram apresentados conceitos fundamentais de gerenciamento financei
 Por fim, participei do AWS Cloud Quest, uma experiência prática em formato de jogo que complementou muito bem os cursos teóricos. Diferente de um curso tradicional, essa atividade se estruturou em 12 desafios interativos, cada um abordando um ou mais serviços da AWS. Entre os serviços explorados, estavam EC2 (máquinas virtuais), EBS (armazenamento em bloco), S3 (armazenamento em objetos), DynamoDB (banco de dados NoSQL), entre muitos outros.
 
 Em cada tarefa, era necessário compreender a situação proposta, aplicar o conhecimento técnico e configurar os recursos adequadamente, simulando cenários do mundo real. Essa dinâmica lúdica possibilitou experimentar, de forma prática e envolvente, como construir soluções na nuvem e administrar diferentes serviços de forma integrada. Foi uma oportunidade de consolidar os aprendizados anteriores, colocando a mão na massa e visualizando na prática como a AWS pode ser aplicada em diferentes contextos e necessidades.
+<br>
+<br>
 
 ## [EXERCÍCIOS](https://github.com/aline-hoffmann/scholarship-compass/tree/main/Sprint_4/Exercicios)
 
 ## [EVIDÊNCIAS](https://github.com/aline-hoffmann/scholarship-compass/tree/main/Sprint_4/Evidencias) 
+<br>
+<br>
 
 ## [CERTIFICADOS](https://github.com/aline-hoffmann/scholarship-compass/tree/main/Sprint_4/Certificados)
 
-[**AWS Cloud Quest: Praticante de nuvem**](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_4/Certificados/certifcado-cloud-quest.pdf)
+[**AWS Cloud Quest: Praticante de nuvem:**](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_4/Certificados/certifcado-cloud-quest.pdf)
 
 ![imagem](./Evidencias/Certificados/cloud-quest.jpg)
+<br>
+<br>
 
-[**AWS Partner: Sales Accreditation**](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_4/Certificados/certificado-sales-accreditation.pdf)
+[**AWS Partner: Sales Accreditation:**](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_4/Certificados/certificado-sales-accreditation.pdf)
 
 ![imagem](./Evidencias/Certificados/sales-accreditation.jpg)
+<br>
+<br>
 
-[**AWS Partner: Cloud Economics Essentials**](https://www.credly.com/badges/22f5e524-8a5a-4877-9e55-4d37413bc27d)
+[**AWS Partner: Cloud Economics Essentials:**](https://www.credly.com/badges/22f5e524-8a5a-4877-9e55-4d37413bc27d)
 
 ![imagem](./Evidencias/Certificados/badge-cloud-ec.jpg)
+<br>
+<br>
 
 ## **DESAFIO**
 
