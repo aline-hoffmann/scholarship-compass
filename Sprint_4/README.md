@@ -39,7 +39,9 @@ Em cada tarefa, era necessário compreender a situação proposta, aplicar o con
 <br>
 <br>
 
-[**AWS Partner: Cloud Economics Essentials:**](https://www.credly.com/badges/22f5e524-8a5a-4877-9e55-4d37413bc27d)
+**AWS Partner: Cloud Economics Essentials:** esse curso não gerou certificado, porém, a verificação da badge pode ser feita [aqui.](https://www.credly.com/badges/22f5e524-8a5a-4877-9e55-4d37413bc27d)
+
+![imagem](./Evidencias/Certificados/sem-certificado.jpg)
 
 ![imagem](./Evidencias/Certificados/badge-cloud-ec.jpg)
 <br>
