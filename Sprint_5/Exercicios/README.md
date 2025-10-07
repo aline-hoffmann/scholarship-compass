@@ -43,6 +43,8 @@ df = sorted_counts.toDF(["word", "count"])
 df.write.csv("/home/jovyan/work/word_counts.csv", header=True)
 ````
 
+O resultado, salvo em um arquivo CSV, pode ser visualizado [aqui](Sprint_5\Exercicios\resultado-contador.csv).
+
 ![imagem](../Evidencias/contando-palavras.jpg)
 
 ![imagem](../Evidencias/contagem.jpg)
