@@ -12,7 +12,7 @@ Dentro do Jupyter Lab, no terminal, rodei o comando "pyspark".
 
 ![imagem](../Evidencias/pyspark.jpg)
 
-Após isso, utilizando o Spark shell, os comandos Spark utilizados para contar a quantidade de ocorrências de cada palavra contida no arquivo "README.md" do meu repositório do Github foram os seguintes:
+Após isso, utilizando o Spark shell, os comandos Spark utilizados para contar a quantidade de ocorrências de cada palavra contida no arquivo "README.md" do meu repositório do Github foram os exibidos a seguir, podendo ser visualizados também [aqui](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_5/Exercicios/cod-spark.txt).
 
 ````
 # Ler o arquivo
