@@ -1,0 +1,29 @@
+# Iniciar o pyspark
+pyspark
+
+# Ler o arquivo
+arquivo = sc.textFile("/home/jovyan/work/README.md")
+
+# Separar palavras
+words = arquivo.flatMap(lambda line: line.lower().split())
+
+# Limpar pontuação
+clean_words = words.map(lambda word: ''.join(filter(str.isalpha, word)))
+
+# Remover palavras vazias
+non_empty_words = clean_words.filter(lambda word: len(word) > 0)
+
+# Contar as palavras
+word_counts = non_empty_words.map(lambda word: (word, 1))
+word_counts = word_counts.reduceByKey(lambda a, b: a + b)
+
+# Ordenar do mais frequente
+sorted_counts = word_counts.sortBy(lambda x: x[1], ascending=False)
+
+# Mostrar as 20 palavras mais comuns
+for (word, count) in sorted_counts.take(20):
+    print(f"{word}: {count}")
+
+# Salvar todos os resultados em CSV
+df = sorted_counts.toDF(["word", "count"])
+df.write.csv("/home/jovyan/work/word_counts.csv", header=True)
