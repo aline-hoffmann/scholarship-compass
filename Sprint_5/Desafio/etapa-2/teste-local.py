@@ -3,23 +3,21 @@ import requests
 import json
 import time
 
-# 🔑 SUA CHAVE DA API DO TMDB
+# Chave API
 TMDB_API_KEY = "4e9572f883f351f99ca1729dfa04e22e"
 
-# Configurações
+# Principais definições 
 GENRE_NAME = "Comédia"
 GENRE_ID = 35
-PAGES = 40
+PAGES = 50
 RECORDS_PER_FILE = 100
 
+# Criando a pasta para armazenar os jsons
 OUT_DIR = "raw_zone"
 MOVIES_DIR = os.path.join(OUT_DIR, "movies")
 os.makedirs(MOVIES_DIR, exist_ok=True)
 
-if not TMDB_API_KEY or TMDB_API_KEY == "COLOQUE_SUA_CHAVE_AQUI":
-    raise SystemExit("❌ Coloque sua TMDB API key na variável TMDB_API_KEY antes de executar.")
-
-# ---------- Buscar filmes/séries ----------
+# Função para buscar os filmes
 def fetch_tmdb(content_type, genre_id):
     items = []
     seen = set()
@@ -41,14 +39,14 @@ def fetch_tmdb(content_type, genre_id):
         for item in response.json().get("results", []):
             if item["id"] not in seen:
                 seen.add(item["id"])
-                # remover campos indesejados
+                # removendo campos desnecessários
                 item.pop("overview", None)
                 item.pop("backdrop_path", None)
                 item.pop("poster_path", None)
                 items.append(item)
     return items
 
-# ---------- Buscar detalhes do filme ----------
+# Buscando orçamento e bilheteria dos filmes
 def fetch_movie_details(movie_id):
     url = f"https://api.themoviedb.org/3/movie/{movie_id}"
     params = {"api_key": TMDB_API_KEY, "language": "pt-BR"}
@@ -61,7 +59,7 @@ def fetch_movie_details(movie_id):
         print(f"Erro ao buscar detalhes do filme {movie_id}: {e}")
     return {"budget": None, "revenue": None}
 
-# ---------- Salvar arquivos ----------
+# Função pra dividir os json com no máximo 100 registros
 def save_json_chunks(data_list, target_dir, prefix):
     for i in range(0, len(data_list), RECORDS_PER_FILE):
         chunk = data_list[i:i+RECORDS_PER_FILE]
@@ -70,8 +68,9 @@ def save_json_chunks(data_list, target_dir, prefix):
             json.dump(chunk, f, ensure_ascii=False, indent=2)
         print(f"💾 Arquivo salvo: {file_name} ({len(chunk)} registros)")
 
-# ---------- Execução principal ----------
-print(f"\n🎬 Buscando FILMES de {GENRE_NAME}...")
+
+# Executando a coleta
+print(f"\n Buscando FILMES de {GENRE_NAME}...")
 movies = fetch_tmdb("movie", GENRE_ID)
 for m in movies:
     m["genero"] = GENRE_NAME
@@ -80,7 +79,7 @@ for m in movies:
     m.update(detalhes)
     time.sleep(0.2)
 
-# Salvar arquivos
+# Salvando os resultados
 save_json_chunks(movies, MOVIES_DIR, "movies")
 
 print(f"\n✅ Concluído!")

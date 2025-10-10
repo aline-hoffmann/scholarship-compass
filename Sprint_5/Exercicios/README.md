@@ -2,15 +2,15 @@
 
 Inicialmente, precisei baixar a imagem "jupyter/all-spark-notebook" fornecida pelo exercício. 
 
-![imagem](../Evidencias/imagem.jpg)
+![imagem](../Evidencias/Exercicios/imagem.jpg)
 
 Logo após, criei um container a partir da imagem baixada. A inicialização do container gerou um link, dessa forma, colei esse link na barra de endereços do meu navegador e obtive acesso ao Jupyter Lab.
 
-![imagem](../Evidencias/link-jupyter.jpg)
+![imagem](../Evidencias/Exercicios/link-jupyter.jpg)
 
 Dentro do Jupyter Lab, no terminal, rodei o comando "pyspark".
 
-![imagem](../Evidencias/pyspark.jpg)
+![imagem](../Evidencias/Exercicios/pyspark.jpg)
 
 Após isso, utilizando o Spark shell, os comandos Spark utilizados para contar a quantidade de ocorrências de cada palavra contida no arquivo "README.md" do meu repositório do Github foram os exibidos a seguir, podendo ser visualizados também [aqui](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_5/Exercicios/cod-spark.txt).
 
@@ -45,18 +45,18 @@ df.write.csv("/home/jovyan/work/word_counts.csv", header=True)
 
 O resultado, salvo em um arquivo CSV, pode ser visualizado [aqui](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_5/Exercicios/resultado-contador.csv).
 
-![imagem](../Evidencias/contando-palavras.jpg)
+![imagem](../Evidencias/Exercicios/contando-palavras.jpg)
 
-![imagem](../Evidencias/contagem.jpg)
+![imagem](../Evidencias/Exercicios/contagem.jpg)
 
 ## TMDB
 
 No segundo exercício, iniciei criando uma conta no portal TMDB, para posteriormente solicitar as chaves de acesso para uso da API.
 
-![imagem](../Evidencias/tmdb.jpg)
+![imagem](../Evidencias/Exercicios/tmdb.jpg)
 
 Depois da conta criada, efetuei o teste com as credenciais e a biblioteca, utilizando o código fornecido pelo exercício.
 
 O teste obteve êxito.
 
-![imagem](../Evidencias/ex2.jpg)
+![imagem](../Evidencias/Exercicios/ex2.jpg)

@@ -81,4 +81,6 @@ Com isso, realizei o upload dos arquivos para o meu bucket na AWS, fazendo a ver
 
 Na etapa dois, deveríamos captar dados do TMDB via AWS LAMBDA para complementar os dados dos filmes e séries do csv, realizando requisições para a API.
 
-Para decidir o que eu ia trazer do TMDB, iniciei verificando qual o **ID dos gêneros de filme comédia e animação, sendo 35 e 16, respectivamente**.
+Para decidir o que eu ia trazer do TMDB, iniciei verificando qual o **ID dos gêneros de filme comédia e animação, sendo 35 e 16, respectivamente**. Como minha análise se baseia em filmes de comédia, optei por puxar apenas dados do ID 35.
+
+Criei variáveis de ambiente
