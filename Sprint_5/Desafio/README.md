@@ -1,4 +1,4 @@
-## DESAFIO
+# DESAFIO
 
 Antes de iniciar as efetivas etapas do desafio, tínhamos que formular questões que os dados constantes no csv fornecido e na API do TMDB deveriam responder.
 
@@ -60,7 +60,7 @@ except Exception as e:
     print("❌ Erro ao enviar arquivos:", e)
 ````
 
-![imagem](../Evidencias/cod-python.jpg)
+![imagem](../Evidencias/Desafio/cod-python.jpg)
 
 Depois de definido o código python, criei um arquivo Dockerfile. Esse Dockerfile cria um container Python 3.9, copia os arquivos do projeto, instala as dependências boto3 e python-dotenv, e define que o script "etapa1.py" será executado automaticamente ao iniciar o container.
 
@@ -76,3 +76,9 @@ Com isso, realizei o upload dos arquivos para o meu bucket na AWS, fazendo a ver
 ![imagem](../Evidencias/Desafio/upload-csvs.jpg)
 ![imagem](../Evidencias/Desafio/movies-aws.jpg)
 ![imagem](../Evidencias/Desafio/series-aws.jpg)
+
+## ETAPA 2
+
+Na etapa dois, deveríamos captar dados do TMDB via AWS LAMBDA para complementar os dados dos filmes e séries do csv, realizando requisições para a API.
+
+Para decidir o que eu ia trazer do TMDB, iniciei verificando qual o **ID dos gêneros de filme comédia e animação, sendo 35 e 16, respectivamente**.
