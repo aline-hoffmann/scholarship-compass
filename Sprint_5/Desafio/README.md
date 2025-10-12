@@ -4,7 +4,9 @@ Antes de iniciar as efetivas etapas do desafio, tínhamos que formular questões
 
 Ademais, essas perguntas deveriam ser formuladas a respeito apenas dos filmes pertencentes a categoria definidada para cada Squad.
 
-Como faço parte do **Squad 1**, minha cetegoria de filmes foi **Comédia/Animação**. Sendo assim, defini os seguintes questionamentos:
+Como faço parte do **Squad 1**, minha cetegoria de filmes foi **Comédia/Animação**. Sendo assim, defini os meus questionamentos baseados nisso.
+
+## QUESTIONAMENTOS
 
 1. Quais são os artistas mais recorrentes em filmes de comédia?
 
@@ -83,4 +85,24 @@ Na etapa dois, deveríamos captar dados do TMDB via AWS LAMBDA para complementar
 
 Para decidir o que eu ia trazer do TMDB, iniciei verificando qual o **ID dos gêneros de filme comédia e animação, sendo 35 e 16, respectivamente**. Como minha análise se baseia em filmes de comédia, optei por puxar apenas dados do ID 35.
 
-Criei variáveis de ambiente
+Devido aos [meus questionamentos](#questionamentos), optei por, além de trazer os dados básicos dos filmes de comédia, puxar também os dados de orçamento e bilheteria.
+
+Para fazer a integração com a API, criei uma função ("tmdb_ingestao") e executei a mesma no Console AWS.
+
+![imagem](../Evidencias/Desafio/funcao-criada.jpg)
+
+Essa função faz requisições à API do TMDB filtrando por filmes de comédia, removendo informações que não vou utilizar para responder minhas questões para deixar o JSON mais leve.  
+
+![imagem](../Evidencias/Desafio/cod-funcao.jpg)
+
+Além disso, a função salva o resultado no S3 em uma estrutura de pastas organizada por **ano/mês/dia** e retorna um resumo com o status e o número de filmes coletados.
+
+![imagem](../Evidencias/Desafio/sucesso-ingestao.jpg)
+
+![imagem](../Evidencias/Desafio/caminho-json.jpg)
+
+Como a função utilizava uma biblioteca externa, precisei criar uma camada para incluir a dependência.
+
+![imagem](../Evidencias/Desafio/adicao-camada.jpg)
+
+O código completo da função pode ser visualizado [aqui.](https://github.com/aline-hoffmann/scholarship-compass/tree/main/Sprint_5/Desafio/etapa-2)
