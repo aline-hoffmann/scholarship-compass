@@ -18,7 +18,7 @@ Como faço parte do **Squad 1**, minha cetegoria de filmes foi **Comédia/Anima�
 
 ## ETAPA 1
 
-Iniciei criando um bucket manualmente, chamando-o de "desafio-final-aline" e dasabilidando a opção de bloquear acesso público.
+Iniciei criando um bucket manualmente, chamando-o de "desafio-final-aline" e dasabilitando a opção de bloquear acesso público.
 
 ![imagem](../Evidencias/Desafio/bucket-criado.jpg)
 

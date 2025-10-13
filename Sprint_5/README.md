@@ -1,4 +1,4 @@
-# 📍 SPRINT 5
+# 📍 **SPRINT 5**
 
 ## Formação Spark com Pyspark
 
@@ -26,26 +26,33 @@ Durante o curso, aprendi a agregar, processar e armazenar dados para gerar insig
 
 ## **[CERTIFICADOS](https://github.com/aline-hoffmann/scholarship-compass/tree/main/Sprint_5/Certificados)**
 
-[Fundamentals of Analytics on AWS – Part 1](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_5/Certificados/foa-aws-part1.pdf)
+### [Fundamentals of Analytics on AWS – Part 1](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_5/Certificados/foa-aws-part1.pdf)
 
 ![imagem](./Evidencias/Certificados/cert-foa-aws-part1.jpg)
 <br>
 <br>
 
-[Introduction to Amazon Athena](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_5/Certificados/athena-aws.pdf)
+### [Introduction to Amazon Athena](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_5/Certificados/athena-aws.pdf)
 
 ![imagem](./Evidencias/Certificados/cert-athena.jpg)
 <br>
 <br>
 
-[Serverless Analytics](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_5/Certificados/serverless-aws.pdf)
+### [Serverless Analytics](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_5/Certificados/serverless-aws.pdf)
 
 ![imagem](./Evidencias/Certificados/cert-serverless.jpg)
+<br>
 
 ## **[EXERCÍCIOS](https://github.com/aline-hoffmann/scholarship-compass/tree/main/Sprint_5/Exercicios)**
 <br>
 
-## [EVIDÊNCIAS](https://github.com/aline-hoffmann/scholarship-compass/tree/main/Sprint_5/Evidencias)**
+## **[EVIDÊNCIAS](https://github.com/aline-hoffmann/scholarship-compass/tree/main/Sprint_5/Evidencias)**
 <br>
 
 ## **DESAFIO**
+
+O desafio consistia em integrar e analisar dados de filmes e séries utilizando serviços da AWS e a API do TMDB. Primeiro, foi necessário criar um bucket no S3 e enviar os arquivos CSV fornecidos, garantindo que os dados estivessem armazenados de forma organizada e acessível na nuvem. Em seguida, foi desenvolvida uma função Lambda para coletar informações complementares diretamente da API do TMDB, filtrando apenas os filmes do gênero Comédia, conforme o tema definido para o Squad 1.
+
+Todo o processo — desde o upload dos arquivos até a ingestão dos dados via Lambda — foi concluído com sucesso. Os arquivos foram corretamente enviados para o bucket e os dados retornados pela API foram salvos em formato JSON dentro da estrutura do S3, confirmando que as etapas de integração, automação e armazenamento funcionaram conforme o esperado.
+
+Todos os passos e códigos utilizados para a execução do desafio podem ser visualizados [aqui.](https://github.com/aline-hoffmann/scholarship-compass/tree/main/Sprint_5/Desafio)
