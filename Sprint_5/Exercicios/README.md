@@ -55,8 +55,8 @@ No segundo exercício, iniciei criando uma conta no portal TMDB, para posteriorm
 
 ![imagem](../Evidencias/Exercicios/tmdb.jpg)
 
-Depois da conta criada, efetuei o teste com as credenciais e a biblioteca, utilizando o código fornecido pelo exercício.
+Depois da conta criada, efetuei o teste com as credenciais e a biblioteca, utilizando o código fornecido pelo exercício. Minha chave API foi salva em uma variável de ambiente por segurança.
 
 O teste obteve êxito.
 
-![imagem](../Evidencias/Exercicios/ex2.jpg)
+![imagem](../Evidencias/Exercicios/cod-tmdb.jpg)
