@@ -87,7 +87,7 @@ Para decidir o que eu ia trazer do TMDB, iniciei verificando qual o **ID dos gê
 
 Devido aos [meus questionamentos](#questionamentos), optei por, além de trazer os dados básicos dos filmes de comédia, puxar também os dados de orçamento e bilheteria.
 
-Para fazer a integração com a API, criei uma função ("tmdb_ingestao") e executei a mesma no Console AWS.
+Para fazer a integração com a API, criei uma função ("tmdb_ingestao") e executei a mesma no Console AWS. Por segurança, armazenei minhas credenciais em uma variável de ambiente.
 
 ![imagem](../Evidencias/Desafio/funcao-criada.jpg)
 
