@@ -64,4 +64,55 @@ O código completo e o resultado impresso foram:
 
 ![imagem](../Evidencias/Exercicios/resultado-ex-p1-etapa2.jpg)
 
-O arquivo txt gerado pode ser visualizado [aqui](COLOCAR O LINK DO GITBUH!!!!!!!!!!!!!).
+O arquivo txt gerado pode ser visualizado [aqui](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_6/Exercicios/animais.txt).
+
+## ETAPA 3
+
+Iniciei instalando a biblioteca "names", pelo terminal.
+
+````
+pip install names
+````
+
+![imagem](../Evidencias/Exercicios/instalando-names.jpg)
+
+Após isso, importei as bibiotecas solicitadas.
+
+````
+import random
+import time
+import os
+import names
+````
+
+Depois, defini os parâmetros para a geração do dataset, ou seja, a quantidade de nomes aleatórios e a quantidades de nomes, que deviam ser únicos. Defini também a semente da aleatoriedade.
+
+````
+random.seed(40)
+qtd_nomes_unicos = 39080
+qtd_nomes_aleatorios = 1000000
+````
+
+Ademais, gerei os nomes aleatórios através do código fornecido.
+
+````
+aux=[]
+for i in range(0, qtd_nomes_unicos):
+    aux.append(names.get_full_name())
+
+print(f'Gerando {qtd_nomes_aleatorios} nomes aleatórios')
+
+dados=[]
+for i in range(0, qtd_nomes_aleatorios):
+    dados.append(random.choice(aux))
+````
+
+Por fim, gerei um aquivo txt "nomes_aleatorios" com todos os nomes, um a cada linha.
+
+````
+with open("nomes_aleatorios.txt", "w", encoding="utf-8") as arquivo:
+    for nome in dados:
+        arquivo.write(f"{nome}\n")
+````
+
+O arquivo "nomes_aleatorios.txt" pode ser consultado [aqui] LINK DO GITHUB!!!!!!!!!!1
