@@ -115,4 +115,4 @@ with open("nomes_aleatorios.txt", "w", encoding="utf-8") as arquivo:
         arquivo.write(f"{nome}\n")
 ````
 
-O arquivo "nomes_aleatorios.txt" pode ser consultado [aqui] LINK DO GITHUB!!!!!!!!!!1
+O arquivo "nomes_aleatorios.txt" pode ser consultado [aqui](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_6/Exercicios/nomes_aleatorios.txt).
