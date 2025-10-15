@@ -90,7 +90,7 @@ Depois, defini os parâmetros para a geração do dataset, ou seja, a quantidade
 ````
 random.seed(40)
 qtd_nomes_unicos = 39080
-qtd_nomes_aleatorios = 1000000
+qtd_nomes_aleatorios = 10000000
 ````
 
 Ademais, gerei os nomes aleatórios através do código fornecido.
@@ -115,4 +115,6 @@ with open("nomes_aleatorios.txt", "w", encoding="utf-8") as arquivo:
         arquivo.write(f"{nome}\n")
 ````
 
-O arquivo "nomes_aleatorios.txt" pode ser consultado [aqui](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_6/Exercicios/nomes_aleatorios.txt).
+Devido ao tamanho, não enviei o arquivo "nomes_aleatorios.txt" para o GitHub.
+
+![imagem](../Evidencias/Exercicios/nomes-gerados.jpg)
