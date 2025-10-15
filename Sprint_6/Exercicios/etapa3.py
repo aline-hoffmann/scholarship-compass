@@ -6,7 +6,7 @@ import names
 # Definindo parâmetros e semente de aleatoriedade
 random.seed(40)
 qtd_nomes_unicos = 39080
-qtd_nomes_aleatorios = 1000000
+qtd_nomes_aleatorios = 10000000
 
 # Gerando os nomes aleatórios únicos
 aux=[]
