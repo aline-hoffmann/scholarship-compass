@@ -64,7 +64,7 @@ O código completo e o resultado impresso foram:
 
 ![imagem](../Evidencias/Exercicios/parte1/resultado-ex-p1-etapa2.jpg)
 
-O arquivo txt gerado pode ser visualizado [aqui](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_6/Exercicios/animais.txt). MUDAR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+O arquivo txt gerado pode ser visualizado [aqui](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_6/Exercicios/parte1/animais.txt). 
 
 ## ETAPA 3
 
@@ -120,6 +120,7 @@ Devido ao tamanho, não enviei o arquivo "nomes_aleatorios.txt" para o GitHub.
 ![imagem](../Evidencias/Exercicios/parte1/nomes-gerados.jpg)
 
 <br>
+
 # PARTE 2.
 
 ## ETAPA 1
@@ -330,4 +331,6 @@ df_geracoes.show(52)
 
 ![imagem](../Evidencias/Exercicios/parte2/etapa10-parte2.jpg)
 
-O arquivo .ipynb pode ser visualizado [aqui](). Já o script python pode ser acessado [aqui]().
+<br>
+
+O arquivo .ipynb pode ser visualizado [aqui](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_6/Exercicios/parte2/parte2.ipynb). Já o script python pode ser acessado [aqui](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_6/Exercicios/parte2/parte2.py).
