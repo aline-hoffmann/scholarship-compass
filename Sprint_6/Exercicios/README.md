@@ -379,7 +379,7 @@ No quinto passo, criei um job AWS Glue em Python/Spark para processar o arquivo 
 
 O resultado final é salvo no S3 em formato JSON, particionado por sexo e ano. O job utiliza parâmetros de entrada e saída para permitir flexibilidade e é finalizado com job.commit() garantindo que a execução seja registrada e os recursos liberados.
 
-O scrip utilizado pode ser visualizado AQUI!!!!!!!!!!!!! (link)
+O scrip utilizado pode ser visualizado [aqui](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_6/Exercicios/lab-glue/script.py).
 
 
 ![imagem](../Evidencias/Exercicios/lab/script-job.jpg)
