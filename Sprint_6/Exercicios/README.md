@@ -341,7 +341,7 @@ O arquivo .ipynb pode ser visualizado [aqui](https://github.com/aline-hoffmann/s
 
 ## PASSO 1
 
-Iniciei criando um bucket manualmente na AWS e nominando-o de "sprint-seis-aline". Logo após, fiz o envio do CSV fornecido "nomes.csv" para o meu bucket, seguindo o caminho determinado.
+Iniciei criando um bucket manualmente na AWS e nominando-o de "sprint-seis-aline". Logo após, fiz o envio do CSV fornecido "nomes.csv" para o meu bucket, seguindo o caminho determinado. 
 
 ![imagem](../Evidencias/Exercicios/lab/bucket-criado.jpg)
 
@@ -354,6 +354,8 @@ s3 = boto3.client("s3")
 
 s3.upload_file(local_file, bucket_name, s3_path)
 ````
+
+O código utilizado no envio do CSV para o meu bucket pode ser visualizado [aqui](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_6/Exercicios/lab-glue/lab.ipynb).
 
 ![imagem](../Evidencias/Exercicios/lab/caminho-csv.jpg)
 
@@ -379,7 +381,7 @@ No quinto passo, criei um job AWS Glue em Python/Spark para processar o arquivo 
 
 O resultado final é salvo no S3 em formato JSON, particionado por sexo e ano. O job utiliza parâmetros de entrada e saída para permitir flexibilidade e é finalizado com job.commit() garantindo que a execução seja registrada e os recursos liberados.
 
-O scrip utilizado pode ser visualizado [aqui](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_6/Exercicios/lab-glue/script.py).
+O script utilizado pode ser visualizado [aqui](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_6/Exercicios/lab-glue/script.py).
 
 
 ![imagem](../Evidencias/Exercicios/lab/script-job.jpg)
@@ -388,7 +390,7 @@ O scrip utilizado pode ser visualizado [aqui](https://github.com/aline-hoffmann/
 
 ## PASSO 6
 
-Nessa parte, eu criei um Crawler no AWS Glue chamado FrequenciaRegistroNomesCrawler para gerar automaticamente a tabela frequencia_registro_nomes_eua no catálogo de dados.
+Nessa parte eu criei um Crawler no AWS Glue chamado FrequenciaRegistroNomesCrawler para gerar automaticamente a tabela frequencia_registro_nomes_eua no catálogo de dados.
 
 ![imagem](../Evidencias/Exercicios/lab/crawler.jpg)
 
