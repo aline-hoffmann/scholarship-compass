@@ -334,3 +334,66 @@ df_geracoes.show(52)
 <br>
 
 O arquivo .ipynb pode ser visualizado [aqui](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_6/Exercicios/parte2/parte2.ipynb). Já o script python pode ser acessado [aqui](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_6/Exercicios/parte2/parte2.py).
+
+<br>
+
+# LABORATÓRIO AWS
+
+## PASSO 1
+
+Iniciei criando um bucket manualmente na AWS e nominando-o de "sprint-seis-aline". Logo após, fiz o envio do CSV fornecido "nomes.csv" para o meu bucket, seguindo o caminho determinado.
+
+![imagem](../Evidencias/Exercicios/lab/bucket-criado.jpg)
+
+````
+bucket_name = "sprint-seis-aline"
+s3_path = "lab-glue/input/nomes.csv"
+local_file = r"C:\Users\josim\OneDrive\Área de Trabalho\ALINE\CC\COMPASS\scholarship-compass\Sprint_6\Exercicios\lab-glue\nomes.csv"
+
+s3 = boto3.client("s3")
+
+s3.upload_file(local_file, bucket_name, s3_path)
+````
+
+![imagem](../Evidencias/Exercicios/lab/caminho-csv.jpg)
+
+## PASSO 2
+
+No segundo passo, criei a função "AWSGlueServiceRole-Lab4", com as quatro permissões definidas para o laboratório.
+
+![imagem](../Evidencias/Exercicios/lab/permissoes.jpg)
+
+## PASSO 3
+
+O terceiro passo era configurar a minha conta para utilizar o AWS Glue, especificando que a função criada no passo dois deve ter acesso ao serviço.
+
+## PASSO 4
+
+Nesse quarto passo, criei um novo banco de dados, chamando-o de "glue-lab" conforme solicitado.
+
+![imagem](../Evidencias/Exercicios/lab/database.jpg)
+
+## PASSO 5
+
+No quinto passo, criei um job AWS Glue em Python/Spark para processar o arquivo nomes.csv do S3. O job lê o CSV, exibe o schema, transforma os nomes para maiúsculo, realiza contagens de registros totais, por ano e sexo, identifica os nomes femininos e masculinos mais frequentes com o respectivo ano e mostra o total de registros por ano (limitado às 10 primeiras linhas).
+
+O resultado final é salvo no S3 em formato JSON, particionado por sexo e ano. O job utiliza parâmetros de entrada e saída para permitir flexibilidade e é finalizado com job.commit() garantindo que a execução seja registrada e os recursos liberados.
+
+O scrip utilizado pode ser visualizado AQUI!!!!!!!!!!!!! (link)
+
+
+![imagem](../Evidencias/Exercicios/lab/script-job.jpg)
+
+![imagem](../Evidencias/Exercicios/lab/run-script.jpg)
+
+## PASSO 6
+
+Nessa parte, eu criei um Crawler no AWS Glue chamado FrequenciaRegistroNomesCrawler para gerar automaticamente a tabela frequencia_registro_nomes_eua no catálogo de dados.
+
+![imagem](../Evidencias/Exercicios/lab/crawler.jpg)
+
+Esse crawler serve para analisar os arquivos que estão no S3 e montar os metadados da tabela, como os nomes das colunas e os tipos de dados. Configurei o caminho do S3 (s3://labglue/frequencia_registro_nomes_eua/), usei a função IAM AWSGlueServiceRole-Lab4, defini o banco de destino glue-lab e deixei a execução como On Demand, ou seja, manual. 
+
+Depois de executar, o Glue leu os dados do S3 e criou automaticamente a tabela no Glue Catalog, que eu consegui visualizar tanto no Glue quanto consultar no Athena.
+
+![imagem](../Evidencias/Exercicios/lab/tabela-resultado.jpg)
