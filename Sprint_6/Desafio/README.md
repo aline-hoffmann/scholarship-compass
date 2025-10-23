@@ -52,7 +52,7 @@ Após a leitura do arquivo, eu realizei a limpeza e padronização dos dados. Pr
 
 Em seguida, removi espaços extras de todas as colunas do tipo texto com a função trim(). Também converti os valores de algumas colunas, como tituloPrincipal, tituloOriginal e genero, para letras maiúsculas, garantindo uma padronização nos textos. 
 
-As colunas numéricas, como anoLancamento, notaMedia e tempoMinutos, foram convertidas para o tipo double para permitir operações numéricas de forma correta. 
+As colunas numéricas, como anoLancamento, notaMedia e tempoMinutos, foram convertidas para o tipo double para permitir operações numéricas de forma correta. Também tratei valores nulos.
 
 Por fim, filtrei apenas os registros de filmes cujo gênero contém o termo “COMEDY”, mantendo no dataset apenas os filmes de comédia.
 
@@ -71,10 +71,17 @@ for c in colunas_texto:
     if c in df.columns:
         df = df.withColumn(c, F.upper(F.col(c)))
 
-colunas_numericas = ['anoLancamento', 'tempoMinutos', 'notaMedia', 'numeroVotos']
+colunas_numericas = [
+    'anoLancamento', 'tempoMinutos', 'notaMedia', 'numeroVotos',
+    'anoNascimento', 'anoFalecimento'
+]
 for c in colunas_numericas:
     if c in df.columns:
-        df = df.withColumn(c, F.col(c).cast("double"))
+        df = df.withColumn(
+            c,
+            F.when(F.col(c) == "\\N", None).otherwise(F.col(c).cast("double"))
+        )
+
 
 df = df.filter(F.col("genero").contains("COMEDY"))
 ````
