@@ -24,8 +24,6 @@ Nos tutoriais da AWS LATAM, aprendi a construir um fluxo completo de análise de
 
 ![imagem](./Evidencias/Certificados/cert-foa-aws-part2.jpg)
 
-<br>
-
 ### [AWS Glue Getting Started](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_6/Certificados/cert-foa-aws-part2.pdf)
 
 ![imagem](./Evidencias/Certificados/cert-aws-glue.jpg)
