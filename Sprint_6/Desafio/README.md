@@ -227,3 +227,18 @@ O job foi concluído com sucesso, salvando o arquivo Parquet no caminho correto,
 ![imagem](../Evidencias/Desafio/job-tmdb-succeeded.jpg)
 
 ![imagem](../Evidencias/Desafio/parquet-tmdb.jpg)
+
+
+## ALTERAÇÃO NA PERGUNTA DO DESAFIO FINAL
+
+Durante a etapa de exploração dos dados, optei por reformular uma das perguntas da análise. Inicialmente, a ideia era investigar a relação entre orçamento e nota dos filme, mas após observar melhor as variáveis disponíveis, percebi que seria mais interessante explorar a relação entre popularidade e avaliação dos filmes de comédia.
+
+Sendo assim, as perguntas para análise passaram a ser:
+
+1. Quais são os artistas mais recorrentes em filmes de comédia?
+
+2. Existe diferença de nota média entre comédias estreladas por homens e por mulheres?
+
+3. Qual a média de duração dos filmes de comédia? Há uma tendência de comédias mais longas ou mais curtas nos últimos anos?
+
+**4. Existe relação entre popularidade e nota dos filmes de comédia?** 
