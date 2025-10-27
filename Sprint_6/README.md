@@ -43,3 +43,10 @@ O desafio da Sprint 6 correspondia à etapa 3 do desafio final. Nessa fase, foi 
 Essa etapa garantiu que os dados ficassem padronizados e otimizados para consultas posteriores no AWS Athena, servindo como base para análises e visualizações futuras.
 
 Todos os passos e códigos utilizados para a execução do desafio podem ser visualizados [aqui.](https://github.com/aline-hoffmann/scholarship-compass/tree/main/Sprint_6/Desafio)
+
+<br>
+
+
+## **OBSERVAÇÃO**
+
+O github está apresentando problema quanto ao carregamento e visualização de imagens.
