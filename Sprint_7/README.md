@@ -27,3 +27,15 @@ Durante esta Sprint não foram solicitados exercícios extras ou atividades prá
 ## CERTIFICADOS
 
 Nessa Sprint não foram obtidos certificados adicionais além dos disponibilizados pela Udemy.
+
+<br>
+
+## DESAFIO
+
+O desafio da Sprint 7 correspondia à quarta etapa do desafio final, focando na construção da camada Refined. Nesta fase, trabalhei no processamento e organização dos dados modelados para análise, usando o AWS Glue em conjunto com Apache Spark para ler os dados confiáveis da Trusted, aplicar a modelagem multidimensional e salvar os resultados em formato Parquet na camada Refined.
+
+Todos os passos, scripts e configurações utilizados no desafio podem ser visualizados [aqui.](https://github.com/aline-hoffmann/scholarship-compass/tree/main/Sprint_7/Desafio)
+
+<br>
+
+## [EVIDÊNCIAS](https://github.com/aline-hoffmann/scholarship-compass/tree/main/Sprint_7/Evidencias)

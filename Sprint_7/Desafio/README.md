@@ -8,9 +8,9 @@ Depois de definir o modelo, utilizei o AWS Glue para processar e transformar ess
 
 ## MODELAGEM DE DADOS
 
-Para iniciar a resolução do desafio, organizei os dados da camada Trusted seguindo um modelo em estrela (Star Schema). 
+Para iniciar a resolução do desafio, organizei os dados da camada Trusted seguindo um modelo em estrela (Star Schema). Utilizei a ferramenta BrModelo para criar a modelagem.
 
-Meu objetivo nessa modelagem foi levar apenas as informações necessárias para responder meus questionamentos, definidos nas sprints anteriores.
+Meu objetivo nessa modelagem foi levar apenas as informações necessárias para responder meus questionamentos, definidos nas sprints anteriores. 
 
 Para isso, eu criei uma tabela fato, que concentra as métricas principais, e três dimensões, que armazenam os dados descritivos.
 
@@ -141,7 +141,7 @@ df_tmdb = (df_tmdb
 )
 ````
 
-Outrosssim, optei por não usar os IDs originais das duas fontes para relacionar os dados, pois eram divergentes e não permitiriam uma correspondência segura entre os filmes. Por isso, realizei o join utilizando o título normalizado, garantindo a união correta dos registros que representam o mesmo filme em ambos os datasets.
+Outrossim, optei por não usar os IDs originais das duas fontes para relacionar os dados, pois eram divergentes e não permitiriam uma correspondência segura entre os filmes. Por isso, realizei o join utilizando o título normalizado, garantindo a união correta dos registros que representam o mesmo filme em ambos os datasets.
 
 Depois do join, removi campos duplicados para evitar possíveis ambiguidade nos resultados.
 
@@ -202,7 +202,7 @@ job.commit()
 
 <br>
 
-Depois de pronto o script, salvei o job executei, sendo a execução bem sucedida.
+Depois de pronto o script, salvei o job e executei, sendo a execução bem sucedida.
 
 ![imagem](../Evidencias/job-run.jpg)
 
