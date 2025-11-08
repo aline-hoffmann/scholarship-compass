@@ -36,9 +36,7 @@ ano = data_atual.year
 mes = str(data_atual.month).zfill(2)
 dia = str(data_atual.day).zfill(2)
 
-# ==============================
-# Função para limpar títulos
-# ==============================
+# Limpando títulos para garantir o join correto
 def normalizar_titulo(texto):
     if texto is None:
         return None
@@ -66,7 +64,6 @@ df_csv = (df_csv
     .withColumnRenamed("numeroVotos", "numero_votos")
     .withColumnRenamed("generoArtista", "genero_artista")
     .withColumnRenamed("nomeArtista", "nome_artista")
-    # limpa e padroniza títulos
     .withColumn("titulo_principal", normalizar_titulo_udf(F.col("titulo_principal")))
 )
 
