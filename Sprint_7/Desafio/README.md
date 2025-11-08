@@ -234,3 +234,9 @@ Para facilitar o gerenciamento e consulta dos dados na camada Refined, utilizei 
 **DIMENSÃO ARTISTA**
 
 ![imagem](../Evidencias/dim-artista.jpg)
+
+<br>
+
+**DIMENSÃO TEMPO**
+
+![imagem](../Evidencias/dim-tempo.jpg)
