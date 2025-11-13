@@ -19,4 +19,4 @@
 - [**Sprint 5**](https://github.com/aline-hoffmann/scholarship-compass/tree/main/Sprint_5)
 - [**Sprint 6**](https://github.com/aline-hoffmann/scholarship-compass/tree/main/Sprint_6)
 - [**Sprint 7**](https://github.com/aline-hoffmann/scholarship-compass/tree/main/Sprint_7)
-- [**Sprint 8**](https://github.com/aline-hoffmann/scholarship-compass/tree/3ccadf9b015f1dde6fb28ec8381eeec6c74b272e/Sprint_8)
+- [**Sprint 8**](https://github.com/aline-hoffmann/scholarship-compass/tree/main/Sprint_8)
