@@ -10,7 +10,9 @@ Nesse segundo curso, pude reforçar e praticar ainda mais o que já tinha aprend
 
 <br>
 
-## **[EXERCÍCIOS](https://github.com/aline-hoffmann/scholarship-compass/tree/main/Sprint_8/Exercicios)**
+## **[EXERCÍCIOS (LABORATÓRIO)](https://github.com/aline-hoffmann/scholarship-compass/tree/main/Sprint_8/Exercicios)**
+
+<br>
 
 ## **[CERTIFICADOS](https://github.com/aline-hoffmann/scholarship-compass/tree/main/Sprint_8/Certificados)**
 
