@@ -26,3 +26,5 @@ Nesse segundo curso, pude reforçar e praticar ainda mais o que já tinha aprend
 O desafio da Sprint 8 correspondeu à etapa dedicada ao consumo e análise dos dados presentes na camada Refined. Neste estágio, utilizei o Amazon QuickSight para realizar a exploração dos dados modelados, construindo gráficos que proporcionam uma visão agregada e estratégica sobre o conjunto de filmes, com foco especial em produções de comédia. O objetivo foi extrair e apresentar insights relevantes, evidenciando tendências, padrões e características marcantes do gênero.
 
 Todos os passos, scripts e configurações utilizados no desafio podem ser visualizados [aqui.](https://github.com/aline-hoffmann/scholarship-compass/tree/main/Sprint_8/Desafio)
+
+## **[EVIDÊNCIAS](https://github.com/aline-hoffmann/scholarship-compass/tree/main/Sprint_8/Evidencias)**

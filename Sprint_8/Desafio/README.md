@@ -115,4 +115,6 @@ Por fim, ao comparar os rankings de recorrência, popularidade e nota dos artist
 
 Em síntese, **investir em comédias mais longas e dar protagonismo ao elenco feminino são ações que podem maximizar as chances de sucesso. Recomenda-se que decisões de casting e planejamento de produção levem em conta essas tendências identificadas na análise, combinando múltiplos fatores para potencializar o desempenho dos futuros lançamentos.**
 
-O dashboard com todos os gráficos dessa análise pode ser visualizado aqui.
+<br>
+
+O dashboard com todos os gráficos dessa análise pode ser visualizado [aqui.](https://github.com/aline-hoffmann/scholarship-compass/blob/main/Sprint_8/Desafio/dashboard.pdf)
