@@ -33,7 +33,7 @@ Sendo assim, as análises que farei serão as seguintes:
 
 1. Quais artistas têm maior impacto nos sucessos de comédia?
 
-2. Há diferença significativa na percepção (nota_media) dos filmes de comédia liderados por artistas masculinos versus femininos?
+2. Há diferença significativa na popularidade dos filmes de comédia liderados por artistas masculinos versus femininos?
 
 3. Os filmes de comédia estão ficando mais longos ou mais curtos, e isso afeta a popularidade ou avaliação deles?
 
@@ -63,7 +63,7 @@ A comparação entre as listas mostra que **não há artistas em comum entre ela
 
 <br>
 
-### 2. Há diferença significativa na percepção (nota_media) dos filmes de comédia liderados por artistas masculinos versus femininos?
+### 2. Há diferença significativa na popularidade dos filmes de comédia liderados por artistas masculinos versus femininos?
 
 Para fazer essa análise, criei um gráfico de barras comparando a popularidade média dos filmes de comédia de acordo com o gênero dos artistas presentes no elenco. O gráfico considera apenas artistas classificados como “ACTOR” ou “ACTRESS” e mostra, para cada grupo de gênero, qual é a média de popularidade dos filmes em que participaram.
 
@@ -114,3 +114,5 @@ Além disso, **filmes que contam com atrizes no elenco registram popularidade m�
 Por fim, ao comparar os rankings de recorrência, popularidade e nota dos artistas, **fica evidente que prevalência no gênero não garante participação nos filmes de maior destaque**. O sucesso parece depender mais da escolha precisa do elenco para cada projeto do que da simples repetição dos nomes mais frequentes.
 
 Em síntese, **investir em comédias mais longas e dar protagonismo ao elenco feminino são ações que podem maximizar as chances de sucesso. Recomenda-se que decisões de casting e planejamento de produção levem em conta essas tendências identificadas na análise, combinando múltiplos fatores para potencializar o desempenho dos futuros lançamentos.**
+
+O dashboard com todos os gráficos dessa análise pode ser visualizado aqui.
